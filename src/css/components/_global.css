@@ -1,0 +1,5 @@
+html {
+    body {
+        @apply antialiased overflow-x-hidden font-roboto text-sm break-keep;
+    }
+}
