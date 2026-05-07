@@ -1,5 +1,5 @@
 html {
     body {
-        @apply antialiased overflow-x-hidden font-roboto text-sm break-keep;
+        @apply antialiased overflow-x-hidden break-keep;
     }
 }

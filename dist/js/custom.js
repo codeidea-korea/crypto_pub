@@ -16,7 +16,7 @@ window.addEventListener("load", ()=>{
         .then((response) => response.text())
         .then((htmlData) => {
             if(!$('body').hasClass('logout')){
-                $('body').prepend(htmlData)
+                $('.content').prepend(htmlData)
                 headerScript();
             }
         })
@@ -29,7 +29,7 @@ window.addEventListener("load", ()=>{
         .then((response) => response.text())
         .then((htmlData) => {
             if($('body').hasClass('logout')){
-                $('body').prepend(htmlData)
+                $('.content').prepend(htmlData)
                 headerScript();
             }
         })
