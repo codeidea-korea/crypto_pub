@@ -47,7 +47,7 @@ window.addEventListener("load", ()=>{
         .catch((error) => {
             console.log(error);
         });
-    
+
     // 푸터 
     fetch("./_footer.html")
         .then((response) => response.text())
@@ -105,6 +105,12 @@ const sideMenu = ()=>{
             }
         }
     });
+    
+    $('.side_menu .fold_btn').on('click',function(){
+        $('.side_menu').toggleClass('fold');
+        $(this).toggleClass('fold');
+        $('.content').toggleClass('fold')
+    })
 
 }
 const footerScript = ()=>{}
