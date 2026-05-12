@@ -4,7 +4,7 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>CRABIT link</title>
+	<title>CRYPTO link</title>
 	<meta http-equiv="imagetoolbar" content="no">
 	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
@@ -69,6 +69,13 @@ echo txtRecord('./@record/');
 <div id="publishingContainer">
 
 	<ul class="page-link" style="width:100%;margin-bottom:-50px">
+		<li data-label="메인">
+			<ul>
+				<li><a href="./index_logout.html" target="_blank" class="">로그아웃시 메인</a></li>
+				<li><a href="./index_nocoin.html" target="_blank" class="">krw,usdt 등록 안했을때 메인</a></li>
+				<li><a href="./index.html" target="_blank" class="">로그인 후 메인</a></li>
+			</ul>
+		</li>
 		<!-- <li><a href="./onboarding/onboarding.html" target="_blank" class="">온보딩 작성 완료페이지</a></li>
         <li>
 			<a href="./index.php" target="_blank" class="">메인</a>
@@ -90,8 +97,6 @@ echo txtRecord('./@record/');
 			</ul>
 		</li>
 		<li><a href="./login.php" target="_blank" class="">로그인</a></li> -->
-
-       
 	</ul>
 
     

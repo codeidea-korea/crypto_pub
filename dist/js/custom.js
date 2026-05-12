@@ -74,7 +74,17 @@ window.addEventListener("load", ()=>{
 
 });
 
-const headerScript = ()=>{}
+const headerScript = ()=>{
+    $(window).on('scroll',function(){
+        let scT = $(this).scrollTop();
+        if(scT > 0){
+            $('header').addClass('fix')
+        }else{
+            $('header').removeClass('fix')
+        }
+    })
+}
+
 const sideMenu = ()=>{
     $(".side-menu").on("click", function () {
         if ($(this).parent().find("ul").length) {
@@ -112,6 +122,49 @@ const sideMenu = ()=>{
         $('.content').toggleClass('fold')
     })
 
+
+
 }
 const footerScript = ()=>{}
 const loadJquery = ()=>{}
+
+// 메뉴오픈
+const menuOn = (depth1,depth2)=>{
+    setTimeout(function(){
+        $(`.side-nav .${depth1} > .side-menu`).addClass('side-menu--active');
+        if(depth2){
+            $(`.side-nav .${depth1} > .side-menu`).find('.side-menu__sub-icon').addClass('transform rotate-180');
+            $(`.side-nav .${depth1} > ul`).addClass('side-menu__sub-open');
+            $(`.side-nav .${depth1} > ul`).find('> li').eq(depth2).find('.side-menu').addClass('side-menu--active');
+        };
+    },500);
+}
+
+
+
+// 검색창 열기
+const searchOpen = ()=>{
+    $('.search_area').addClass('active');
+}
+
+// 검색시 결과 보이기
+const searchTyping = (item) => {
+    if ($(item).val().trim() !== '') {
+        $('.search_result').addClass('typing');
+    } else {
+        $('.search_result').removeClass('typing');
+    }
+}
+
+// 딤 영역 클릭시 닫기
+$(document).on('click', function(e) {
+    if ( $('.search_area').hasClass('active') && !$(e.target).closest('.search_box, .search_result').length) {
+        $('.search_area').removeClass('active');
+    }
+});
+
+// 코인 변경
+const coinChange = (item,coin)=>{
+    $(item).addClass('active').siblings().removeClass('active');
+    $('.coin_box').removeClass('krw usdt').addClass(coin)
+}
