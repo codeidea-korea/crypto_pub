@@ -168,3 +168,38 @@ const coinChange = (item,coin)=>{
     $(item).addClass('active').siblings().removeClass('active');
     $('.coin_box').removeClass('krw usdt').addClass(coin)
 }
+
+//=======================================================
+//   공통 - 모달
+//=======================================================
+const modalOpen = (item) => {
+    const modal = document.querySelector(`#${item}`);
+    modal.classList.add("show", "overflow-y-auto");
+    modal.style.marginTop = "0px";
+    modal.style.marginLeft = "0px";
+    modal.style.paddingLeft = "0px";
+    modal.style.zIndex = "10000";
+};
+
+// 모달 닫기
+const modalClose = (item)=>{
+    const modal = document.querySelector(`#${item}`);
+    modal.classList.remove('show');
+    modal.style.marginTop = "-10000px";
+    modal.style.marginLeft = "-10000px";
+    modal.style.paddingLeft = "0";
+    modal.style.zIndex = "0";
+}
+
+// 비밀번호 password<-->text
+const passwordView = (btn)=>{
+    const input = btn.parentElement.querySelector('input');
+    const use = btn.querySelector('use');
+    if (input.type === 'password') {
+        input.type = 'text';
+        use.setAttribute('xlink:href','./dist/images/icon-defs.svg#watch');
+    } else {
+        input.type = 'password';
+        use.setAttribute('xlink:href','./dist/images/icon-defs.svg#watch-off');
+    }
+}

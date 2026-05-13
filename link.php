@@ -13,8 +13,8 @@
 	<!-- <link rel="stylesheet" href="./dist/css/app.css" /> -->
 	<!-- <link rel="stylesheet" href="./dist/css/jquery.datetimepicker.min.css" /> -->
     <!-- <link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"> -->
-	<link rel="stylesheet" href="./css/reset.css" />
-	<link rel="stylesheet" href="./css/style.css" />
+	<link rel="stylesheet" href="./dist/css/app.css" />
+	<link rel="stylesheet" href="./dist/css/custom.css" />
 	<style>
 		.ex_table th{
 			border-bottom-width:1px;	
@@ -69,6 +69,13 @@ echo txtRecord('./@record/');
 <div id="publishingContainer">
 
 	<ul class="page-link" style="width:100%;margin-bottom:-50px">
+		<li data-label="모달">
+			<ul>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('login-modal')">로그인 모달</button>
+				</li>
+			</ul>
+		</li>
 		<li data-label="메인">
 			<ul>
 				<li><a href="./index_logout.html" target="_blank" class="">로그아웃시 메인</a></li>
@@ -76,6 +83,7 @@ echo txtRecord('./@record/');
 				<li><a href="./index.html" target="_blank" class="">로그인 후 메인</a></li>
 			</ul>
 		</li>
+		
 		<!-- <li><a href="./onboarding/onboarding.html" target="_blank" class="">온보딩 작성 완료페이지</a></li>
         <li>
 			<a href="./index.php" target="_blank" class="">메인</a>
@@ -104,41 +112,37 @@ echo txtRecord('./@record/');
 
 
 <!-- 모달 들어가는곳 : S -->    
-<div class="modal" id="join_complete-modal">
-	<div class="modal_wrap">
-		<div class="alert_body">
-			<img src="./img/logo_black.svg" alt="">
-			<div class="txt">
-				{이름}님 회원가입을 환영합니다!<br/>
-				지금 바로 크래빗 무료체험을 시작하세요
-			</div>
-			<div class="btn_box">
-				<a href="./index.php" class="btn btn-secondary">메인으로</a>
-				<a onclick="modalClose('join_complete-modal')" class="btn btn-primary">워크스페이스 바로가기</a>
-			</div>
-		</div>
-	</div>
-</div>
-<?php include_once('_modal.php'); ?>
+
+<?php include_once('_modal.html'); ?>
 <!-- 모달 들어가는곳 : E -->
 
-<script>
-	const modalOpen = (item) => {
-		$('body').addClass('overflow-hidden')
-		$(`#${item}`).addClass('show');
-	}
-	const modalClose = (item) => {
-		$('body').removeClass('overflow-hidden')
-		$(`#${item}`).removeClass('show')
-	}
-</script>
 
 <script src='https://design01.codeidea.io/link_script.js'></script>
 <!-- <script src="./dist/js/app.js"></script> -->
 <!-- <script src="./dist/js/jquery.datetimepicker.full.js"></script> -->
-<script src="./js/jquery-3.7.1.js"></script>
-<!-- <script src="./js/common.js"></script> -->
+<script src="./dist/js/app.js"></script>
 
+<script>
+	const modalOpen = (item) => {
+		const modal = document.querySelector(`#${item}`);
+		modal.classList.add("show", "overflow-y-auto");
+		modal.style.marginTop = "0px";
+		modal.style.marginLeft = "0px";
+		modal.style.paddingLeft = "0px";
+		modal.style.zIndex = "10000";
+	};
+
+	// 모달 닫기
+	const modalClose = (item)=>{
+		const modal = document.querySelector(`#${item}`);
+		modal.classList.remove('show');
+		modal.style.marginTop = "-10000px";
+		modal.style.marginLeft = "-10000px";
+		modal.style.paddingLeft = "0";
+		modal.style.zIndex = "0";
+	}
+
+</script>
 
 
 </body>
