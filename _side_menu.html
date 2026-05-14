@@ -1,7 +1,10 @@
 <div class="side_menu">
     <button class="fold_btn"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu"></use></svg></button>
     <div class="side_menu_box">
-        <h1 class="logo"><a href="./index.html"><img src="./dist/images/logo.png" alt=""><img class="icon" src="./dist/images/logo_icon.png" alt=""></a></h1>
+        <div class="logo_box">
+            <button class="close_btn" onclick="sideToggle()"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            <h1 class="logo"><a href="./index.html"><img src="./dist/images/logo.png" alt=""><img class="icon" src="./dist/images/logo_icon.png" alt=""></a></h1>
+        </div>
         <div class="menu_box">
             <div class="logout_layout">
                 <div class="top_menu">
@@ -248,7 +251,7 @@
 <!-- 모바일 퀵메뉴 -->
 <div class="quick_menu">
     <ul>
-        <li><button class="fold_btn"><svg><use xlink:href="./dist/images/icon-defs.svg#menu"></use></svg></button></li>
+        <li><button class="fold_btn" onclick="sideToggle()"><svg><use xlink:href="./dist/images/icon-defs.svg#menu"></use></svg></button></li>
         <li><a href="javascript:;" class="type2"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_casino"></use></svg><span>라이브 카지노</span></a></li>
         <li><a href="javascript:;"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_bethistory"></use></svg><span>베팅</span></a></li>
         <li><a href="javascript:;"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_sports"></use></svg><span>스포츠</span></a></li>

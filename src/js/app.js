@@ -54,5 +54,5 @@ import "./show-dropdown";
 // import "./show-code";
 import "./side-menu";
 import "./mobile-menu";
-import "./side-menu-tooltip";
+// import "./side-menu-tooltip";
 // import "./dark-mode-switcher";

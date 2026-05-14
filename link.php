@@ -9,6 +9,18 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=10,chrome=1">
 	<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
 	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+
+	<script>
+        (function(d) {
+            var config = {
+            kitId: 'tjz1wdv',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
 	<link href="https://design01.codeidea.io/link_style.css" rel="stylesheet">
 	<!-- <link rel="stylesheet" href="./dist/css/app.css" /> -->
 	<!-- <link rel="stylesheet" href="./dist/css/jquery.datetimepicker.min.css" /> -->
@@ -73,6 +85,24 @@ echo txtRecord('./@record/');
 			<ul>
 				<li>
 					<button class="pop-modal" onclick="modalOpen('login-modal')">로그인 모달</button>
+					<button class="pop-modal" onclick="modalOpen('join-modal')">회원가입 모달</button>
+					<button class="pop-modal" onclick="modalOpen('join_complete-modal')">회원가입 완료 모달</button>
+					<button class="pop-modal" onclick="modalOpen('usdt_regist-modal')">usdt 테더지갑 등록 모달</button>
+					<button class="pop-modal" onclick="modalOpen('krw_regist-modal')">krw 계좌 등록 모달</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('wallet_state-modal')">추가 정보 입력 완료 -로그인전 모달</button>
+					<button class="pop-modal" onclick="modalOpen('wallet_state2-modal')">추가 정보 입력 완료 - 로그인후 모달</button>
+					<button class="pop-modal" onclick="modalOpen('payment_enter-modal')">결제 정보 입력 모달</button>
+					<button class="pop-modal" onclick="modalOpen('usdt_regist_complete-modal')">테더 지갑 등록 완료 모달</button>
+					<button class="pop-modal" onclick="modalOpen('krw_regist_complete-modal')">krw 계좌 등록 완료 모달</button>
+				</li>
+				<li>
+					<button class="pop-modal" onclick="modalOpen('alert_1-modal')">가입한아이디로 로그인 모달</button>
+					<button class="pop-modal" onclick="modalOpen('alert_2-modal')">테더지갑 승인대기 모달</button>
+					<button class="pop-modal" onclick="modalOpen('alert_3-modal')">계좌 승인대기 모달</button>
+					<button class="pop-modal" onclick="modalOpen('logout-modal')">로그아웃 모달</button>
+					<button class="pop-modal" onclick="modalOpen('delete-modal')">삭제 모달</button>
 				</li>
 			</ul>
 		</li>
@@ -82,6 +112,10 @@ echo txtRecord('./@record/');
 				<li><a href="./index_nocoin.html" target="_blank" class="">krw,usdt 등록 안했을때 메인</a></li>
 				<li><a href="./index.html" target="_blank" class="">로그인 후 메인</a></li>
 			</ul>
+		</li>
+
+		<li data-label="카지노">
+
 		</li>
 		
 		<!-- <li><a href="./onboarding/onboarding.html" target="_blank" class="">온보딩 작성 완료페이지</a></li>

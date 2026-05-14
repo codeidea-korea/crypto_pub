@@ -21476,7 +21476,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _side_menu__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./side-menu */ "./src/js/side-menu.js");
 /* harmony import */ var _side_menu__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(_side_menu__WEBPACK_IMPORTED_MODULE_13__);
 /* harmony import */ var _mobile_menu__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./mobile-menu */ "./src/js/mobile-menu.js");
-/* harmony import */ var _side_menu_tooltip__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./side-menu-tooltip */ "./src/js/side-menu-tooltip.js");
 /*
  |--------------------------------------------------------------------------
  | Midone Built-in Components
@@ -21533,7 +21532,7 @@ __webpack_require__.r(__webpack_exports__);
 // import "./show-code";
 
 
-
+// import "./side-menu-tooltip";
 // import "./dark-mode-switcher";
 
 /***/ }),
@@ -21988,82 +21987,6 @@ __webpack_require__.r(__webpack_exports__);
     var modal = tailwind.Modal.getOrCreateInstance(el);
     modal.toggle();
   });
-})();
-
-/***/ }),
-
-/***/ "./src/js/side-menu-tooltip.js":
-/*!*************************************!*\
-  !*** ./src/js/side-menu-tooltip.js ***!
-  \*************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var tippy_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! tippy.js */ "./node_modules/tippy.js/dist/tippy.esm.js");
-
-(function () {
-  "use strict";
-
-  // Side menu tooltips
-  var initTooltips = function tooltips() {
-    $(".side-menu").each(function () {
-      if (this._tippy == undefined) {
-        var content = $(this).find(".side-menu__title").html().replace(/<[^>]*>?/gm, "").trim();
-        (0,tippy_js__WEBPACK_IMPORTED_MODULE_0__["default"])(this, {
-          content: content,
-          arrow: tippy_js__WEBPACK_IMPORTED_MODULE_0__.roundArrow,
-          animation: "shift-away",
-          placement: "right"
-        });
-      }
-      if ($(window).width() <= 1260 || $(this).closest(".side-nav").hasClass("side-nav--simple")) {
-        this._tippy.enable();
-      } else {
-        this._tippy.disable();
-      }
-    });
-    return tooltips;
-  }();
-  window.addEventListener("resize", function () {
-    if ($(".side-menu")) {
-      initTooltips();
-    }
-  });
-  function toggleSideNav() {
-    var sideNav = document.querySelector(".side-nav");
-    sideNav.classList.toggle("fold");
-
-    // fold 클래스 변경 체크 함수 호출
-    checkFold();
-  }
-  var foldBtn = document.querySelector(".fold_btn");
-  if (foldBtn) {
-    foldBtn.addEventListener("click", toggleSideNav);
-  }
-
-  // fold 클래스 체크 함수
-  function checkFold() {
-    var sideMenus = document.querySelectorAll('.side-menu');
-    var sideNav = document.querySelector('.side-nav');
-    if (sideNav == null) return;
-    if (sideNav.classList.contains('fold')) {
-      sideMenus.forEach(function (menu) {
-        if (menu._tippy != undefined) {
-          menu._tippy.enable();
-        }
-      });
-    } else {
-      sideMenus.forEach(function (menu) {
-        if (menu._tippy != undefined) {
-          menu._tippy.disable();
-        }
-      });
-    }
-  }
-
-  // 페이지 로드 시 fold 클래스 변경 체크 함수 호출
-  checkFold();
 })();
 
 /***/ }),

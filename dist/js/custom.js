@@ -140,6 +140,10 @@ const menuOn = (depth1,depth2)=>{
     },500);
 }
 
+// 모바일 퀙 > 사이드메뉴 토글
+const sideToggle = ()=>{
+    $('.side_menu').toggleClass('open')
+}
 
 
 // 검색창 열기
