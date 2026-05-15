@@ -41,8 +41,8 @@
                         <img src="./dist/images/banner/sub_visual_icon.png" alt="">
                     </div>
 
-                    <div class="flex md:flex-row flex-col gap-7 mt-9 md:mt-11">
-                        <div class="w-full md:w-3/5">
+                    <div class="flex lg:flex-row flex-col mt-9 md:mt-11 w-full">
+                        <div class="w-full lg:w-3/5 pr-7">
                             <!-- 게임사 -->
                             <div class="providerSwiper overflow-visible md:overflow-hidden">
                                 <div class="flex items-center justify-between">
@@ -70,7 +70,7 @@
 
                             <!-- 서브카테 -->
                             <div class="grid grid-cols-6 mt-10">
-                                <div class="casino_tab">
+                                <div class="casino_tab active">
                                     <a href="javascript:;">
                                         <i>
                                             <img src="./dist/images/game/tab/casino_1.png" alt="">
@@ -126,7 +126,68 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="shrink-0 w-full md:w-2/5">이벤트</div>
+                        <div class="w-full lg:w-2/5 event_box p-4">
+                            <div class="text-2xl font-medium">이벤트</div>
+                            <div class="slide_box center_arrow">
+                                <ul class="event_slide swiper-wrapper">
+                                    <li class="swiper-slide"><a href="javascript:;">
+                                        <div class="img_box">
+                                            <img src="./dist/images/event/event_1.png" alt="">
+                                            <div class="hover_box yoona">
+                                                <span>Go to</span>
+                                                <p>
+                                                    Event
+                                                    <svg class=""><use xlink:href="./dist/images/icon-defs.svg#link_arrow"></use></svg>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">매일 패자부활전 이벤트</div>
+                                    </a></li>
+                                    <li class="swiper-slide"><a href="javascript:;">
+                                        <div class="img_box">
+                                            <img src="./dist/images/event/event_2.png" alt="">
+                                            <div class="hover_box yoona">
+                                                <span>Go to</span>
+                                                <p>
+                                                    Event
+                                                    <svg class=""><use xlink:href="./dist/images/icon-defs.svg#link_arrow"></use></svg>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">매일 패자부활전 이벤트</div>
+                                    </a></li>
+                                    <li class="swiper-slide"><a href="javascript:;">
+                                        <div class="img_box">
+                                            <img src="./dist/images/event/event_3.png" alt="">
+                                            <div class="hover_box yoona">
+                                                <span>Go to</span>
+                                                <p>
+                                                    Event
+                                                    <svg class=""><use xlink:href="./dist/images/icon-defs.svg#link_arrow"></use></svg>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">매일 패자부활전 이벤트</div>
+                                    </a></li>
+                                    <li class="swiper-slide"><a href="javascript:;">
+                                        <div class="img_box">
+                                            <img src="./dist/images/event/event_1.png" alt="">
+                                            <div class="hover_box yoona">
+                                                <span>Go to</span>
+                                                <p>
+                                                    Event
+                                                    <svg class=""><use xlink:href="./dist/images/icon-defs.svg#link_arrow"></use></svg>
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div class="txt">매일 패자부활전 이벤트</div>
+                                    </a></li>
+                                </ul>
+                                <button class="arrow prev"><svg><use xlink:href="./dist/images/icon-defs.svg#arrow"></use></svg></button>
+                                <button class="arrow next"><svg><use xlink:href="./dist/images/icon-defs.svg#arrow"></use></svg></button>
+                            </div>
+                            <div class="pagination"></div>
+                        </div>
                     </div>
                     
                     <!-- 검색 -->
@@ -157,70 +218,79 @@
                             </div>
                             <div class="result_box">
                                 <ul class="game_list grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-2 md:gap-3">
-                                    <li><a href="javascript:;"><img src="./dist/images/game/table/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/table/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/table/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                                    <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                                    <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
                                 </ul>
                             </div>
                         </div>
                     </div>
 
                     <ul class="game_list grid grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-x-2 gap-y-8 mt-10">
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/casino/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/bet/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/mini/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/slot/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
-                        <li><a href="javascript:;"><img src="./dist/images/game/table/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/casino/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/bet/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/mini/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/slot/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-1.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-2.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-3.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-4.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-5.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-6.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-7.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
+                        <li><div class="card"><div class="card_border"><div class="card_inner"><a href="javascript:;"><img src="./dist/images/game/table/game img-8.png" alt=""><div class="hover_box yoona">PLAY<svg><use xlink:href="./dist/images/icon-defs.svg#play"></use></svg></div></div></div></div></a></li>
                     </ul>
 
+                    <div class="card">
+                        <div class="card_border">
+                            <div class="card_inner">
+                                <a href="javascsript:;">
+                                    <img src="./dist/images/game/game.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
             </div>
@@ -252,6 +322,32 @@
             navigation: {
                 nextEl: ".providerSwiper .next",
                 prevEl: ".providerSwiper .prev",
+            },
+        });
+
+        var eventSwiper = new Swiper(".event_box .slide_box", {
+            speed:1000,
+            loop:true,
+            slidesPerView: 4,
+            spaceBetween: 8,
+            breakpoints:{
+                1000: {
+                    slidesPerView: 4,
+                    spaceBetween: 8,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 12,
+                }
+            },
+            navigation: {
+                nextEl: ".event_box .next",
+                prevEl: ".event_box .prev",
+            },
+            pagination: {
+                el: ".event_box .pagination",
+                clickable: true,
+                type: "bullets", 
             },
         });
 
