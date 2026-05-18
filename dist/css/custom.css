@@ -163,13 +163,15 @@ body::after{
 .center_arrow .arrow.next svg {transform:rotate(180deg); }
 
 /* 게임슬라이드 */
-.game_list li img {width:100%; }
-.game_list li {position:relative; }
-.game_list li:before {content:''; opacity:0; position:absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(to bottom,#0d1028,#5f19d5); border-top-left-radius:30px; transition:all 0.5s; }
-.game_list li .hover_box {opacity:0; z-index:2; position:absolute; left:0; top:0; display:flex; align-items:center; justify-content:center; gap:3px; width:100%; height:100%; font-size:clamp(16px,1.5vw,32px); color:#fff; transition:all 0.5s; }
-.game_list li .hover_box svg {width:22px; height:clamp(14px,1.5vw,24px); fill:#bf22e8; }
-.game_list li:hover:before {opacity:0.6; }
-.game_list li:hover .hover_box {opacity:1; }
+.game_item {position:relative; width:100%; padding: 5px; background: #2a1663; clip-path: polygon(28px 0,100% 0,100% 100%,0 100%,0 28px); }
+.game_border {padding: 3px; background: #ab5fe0; clip-path: polygon(25px 0,100% 0,100% 100%,0 100%,0 25px); }
+.game_inner {overflow:hidden; position:relative; background: #111; clip-path: polygon(22px 0,100% 0,100% 100%,0 100%,0 22px); }
+.game_inner:before {content:''; opacity:0; position:absolute; left:0; top:0; width:100%; height:100%; background:linear-gradient(to top,#0d1028,#5f19d5); transition:all 0.5s; }
+.game_inner:hover:before {opacity:0.6; }
+.game_item .hover_box {opacity:0; z-index:2; position:absolute; left:0; top:0; display:flex; align-items:center; justify-content:center; gap:3px; width:100%; height:100%; font-size:clamp(16px,1.5vw,32px); color:#fff; transition:all 0.5s; }
+.game_item .hover_box svg {width:22px; height:clamp(14px,1.5vw,24px); fill:#bf22e8; }
+.game_item:hover .hover_box {opacity:1; }
+.game_inner img {width:100%; display: block; object-fit: cover; }
 
 @media all and (max-width:767px){
     .slide_arrow {gap:10px; }
@@ -627,8 +629,3 @@ footer .footer_wrap .fnb .menu_box ul li a {font-size:18px; }
 .event_box .pagination {align-items:center; justify-content:center; margin-top:20px; }
 .event_box .pagination .swiper-pagination-bullet {opacity:1; width:9px; height:8px; background-color:#a237cc; border-radius:0; box-shadow:0 0 3px rgba(0,0,0,0.2); }
 .event_box .pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {width:12px; height:12px; background-color:#f297ff; }
-
-.card {width:100%; padding: 5px; background: #2a1663; clip-path: polygon(28px 0,100% 0,100% 100%,0 100%,0 28px); }
-.card_border {padding: 4px; background: #ab5fe0; clip-path: polygon(25px 0,100% 0,100% 100%,0 100%,0 25px); }
-.card_inner {overflow: hidden; background: #111; clip-path: polygon(22px 0,100% 0,100% 100%,0 100%,0 22px); }
-.card_inner img {width: 100%; display: block; object-fit: cover; }
