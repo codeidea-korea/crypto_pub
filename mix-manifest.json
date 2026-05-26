@@ -125,5 +125,17 @@
     "/dist/images/provider/evolution-logo.png": "/dist/images/provider/evolution-logo.png",
     "/dist/images/provider/provider_bg.png": "/dist/images/provider/provider_bg.png",
     "/dist/images/provider/provider_on_bg.png": "/dist/images/provider/provider_on_bg.png",
-    "/dist/images/sample_icon.png": "/dist/images/sample_icon.png"
+    "/dist/images/sample_icon.png": "/dist/images/sample_icon.png",
+    "/dist/images/game/game.png": "/dist/images/game/game.png",
+    "/dist/images/bg/custom_select.png": "/dist/images/bg/custom_select.png",
+    "/dist/images/bg/custom_select_2.png": "/dist/images/bg/custom_select_2.png",
+    "/dist/images/game/slot/slot_1.png": "/dist/images/game/slot/slot_1.png",
+    "/dist/images/game/slot/slot_2.png": "/dist/images/game/slot/slot_2.png",
+    "/dist/images/game/slot/slot_3.png": "/dist/images/game/slot/slot_3.png",
+    "/dist/images/game/slot/slot_4.png": "/dist/images/game/slot/slot_4.png",
+    "/dist/images/game/slot/slot_5.png": "/dist/images/game/slot/slot_5.png",
+    "/dist/images/game/slot/slot_6.png": "/dist/images/game/slot/slot_6.png",
+    "/dist/images/game/slot/slot_7.png": "/dist/images/game/slot/slot_7.png",
+    "/dist/images/game/slot/slot_8.png": "/dist/images/game/slot/slot_8.png",
+    "/dist/images/event/event_detail.png": "/dist/images/event/event_detail.png"
 }

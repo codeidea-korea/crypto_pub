@@ -113,9 +113,14 @@ echo txtRecord('./@record/');
 				<li><a href="./index.html" target="_blank" class="">로그인 후 메인</a></li>
 			</ul>
 		</li>
-
 		<li data-label="카지노">
-
+			<ul>
+				<li><a href="./casino_live.html" target="_blank" class="">라이브 카지노</a></li>
+				<li><a href="./casino_slot.html" target="_blank" class="">슬롯</a></li>
+				<li><a href="./casino_bet.html" target="_blank" class="">벳게임즈</a></li>
+				<li><a href="./casino_table.html" target="_blank" class="">테이블게임</a></li>
+				<li><a href="./casino_mini.html" target="_blank" class="">미니게임</a></li>
+			</ul>
 		</li>
 		
 		<!-- <li><a href="./onboarding/onboarding.html" target="_blank" class="">온보딩 작성 완료페이지</a></li>

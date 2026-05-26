@@ -135,7 +135,7 @@ const menuOn = (depth1,depth2)=>{
         if(depth2){
             $(`.side-nav .${depth1} > .side-menu`).find('.side-menu__sub-icon').addClass('transform rotate-180');
             $(`.side-nav .${depth1} > ul`).addClass('side-menu__sub-open');
-            $(`.side-nav .${depth1} > ul`).find('> li').eq(depth2).find('.side-menu').addClass('side-menu--active');
+            $(`.side-nav .${depth1} > ul`).find('> li').eq((depth2-1)).find('.side-menu').addClass('side-menu--active');
         };
     },500);
 }
@@ -207,3 +207,39 @@ const passwordView = (btn)=>{
         use.setAttribute('xlink:href','./dist/images/icon-defs.svg#watch-off');
     }
 }
+
+
+//=======================================================
+//   custom select
+//=======================================================
+
+$('.custom_select > button').on('click',function(){
+    $(this).parent().toggleClass('on')
+})
+$('.custom_select ul li').on('click',function(){
+    const parent = $(this).parents('.custom_select'); 
+    const text = $(this).find('span').html();
+
+    if(parent.hasClass('txt_type')){
+        parent.removeClass('on')
+        parent.find(' > button span').html(text)
+        $(this).addClass('on').siblings().removeClass('on')
+    }else{
+        parent.removeClass('on')
+        $(this).addClass('on').siblings().removeClass('on')
+
+        let icon = $(this).find('span svg').html()
+        let price = $(this).find('span').text();
+        parent.find('> button .price_icon').html(icon)
+        parent.find('> button .price_txt').text(price)
+        
+    }
+
+});
+document.addEventListener('click',(e)=>{
+    const select = document.querySelector('.custom_select.on')
+
+    if(select && !select.contains(e.target)){
+        select.classList.remove('on')
+    }
+})
