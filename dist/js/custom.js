@@ -243,3 +243,20 @@ document.addEventListener('click',(e)=>{
         select.classList.remove('on')
     }
 })
+
+//=======================================================
+//   tab 변경
+//=======================================================
+const tabChange = (item)=>{
+    let liN = $(item).index();
+    $(item).addClass('active').siblings().removeClass('active');
+    $('.tab_content > div').eq(liN).addClass('active').siblings().removeClass('active');
+}
+
+//=======================================================
+//   table
+//=======================================================
+const openDetail = (item)=>{
+    $(item).addClass('open').siblings().removeClass('open');
+    $(item).next().addClass('detail_open').siblings().removeClass('detail_open');
+}

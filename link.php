@@ -119,7 +119,21 @@ echo txtRecord('./@record/');
 				<li><a href="./casino_slot.html" target="_blank" class="">슬롯</a></li>
 				<li><a href="./casino_bet.html" target="_blank" class="">벳게임즈</a></li>
 				<li><a href="./casino_table.html" target="_blank" class="">테이블게임</a></li>
+			</ul>
+		</li>
+		<li data-label="미니게임">
+			<ul>
 				<li><a href="./casino_mini.html" target="_blank" class="">미니게임</a></li>
+			</ul>
+		</li>
+		<li data-label="내계정">
+			<ul>
+			</ul>
+		</li>
+		<li data-label="이벤트">
+			<ul>
+				<li><a href="./event.html" target="_blank" class="">이벤트</a></li>
+				<li><button class="pop-modal" onclick="modalOpen('event_detail-modal')">이벤트 상세 모달</button></li>
 			</ul>
 		</li>
 		

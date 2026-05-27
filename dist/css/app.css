@@ -1623,6 +1623,12 @@ select{
 .mt-14{
     margin-top: 3.5rem;
 }
+.mt-8{
+    margin-top: 2rem;
+}
+.mt-6{
+    margin-top: 1.5rem;
+}
 .block{
     display: block;
 }
@@ -1743,6 +1749,12 @@ select{
 .w-32{
     width: 8rem;
 }
+.w-1\/2{
+    width: 50%;
+}
+.w-36{
+    width: 9rem;
+}
 .max-w-full{
     max-width: 100%;
 }
@@ -1766,6 +1778,10 @@ select{
 }
 .-rotate-90{
     --tw-rotate: -90deg;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+.rotate-45{
+    --tw-rotate: 45deg;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .transform{
@@ -1909,6 +1925,14 @@ select{
     padding-top: 0.75rem;
     padding-bottom: 0.75rem;
 }
+.px-3{
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+}
+.px-7{
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+}
 .pb-10{
     padding-bottom: 2.5rem;
 }
@@ -1941,6 +1965,12 @@ select{
 }
 .pt-9{
     padding-top: 2.25rem;
+}
+.pl-7{
+    padding-left: 1.75rem;
+}
+.pl-10{
+    padding-left: 2.5rem;
 }
 .text-center{
     text-align: center;
@@ -1981,6 +2011,9 @@ select{
 }
 .italic{
     font-style: italic;
+}
+.leading-loose{
+    line-height: 2;
 }
 .text-\[\#3d0f7f\]{
     --tw-text-opacity: 1;
@@ -9116,6 +9149,12 @@ html body{
     .md\:mt-10{
         margin-top: 2.5rem;
     }
+    .md\:mt-14{
+        margin-top: 3.5rem;
+    }
+    .md\:block{
+        display: block;
+    }
     .md\:hidden{
         display: none;
     }
@@ -9145,6 +9184,15 @@ html body{
     }
     .md\:w-9{
         width: 2.25rem;
+    }
+    .md\:w-80{
+        width: 20rem;
+    }
+    .md\:w-36{
+        width: 9rem;
+    }
+    .md\:w-auto{
+        width: auto;
     }
     .md\:grid-cols-4{
         grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -9201,6 +9249,9 @@ html body{
     }
     .md\:pt-10{
         padding-top: 2.5rem;
+    }
+    .md\:pl-10{
+        padding-left: 2.5rem;
     }
     .md\:text-2xl{
         font-size: 1.5rem;
