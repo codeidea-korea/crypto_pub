@@ -128,6 +128,12 @@ echo txtRecord('./@record/');
 		</li>
 		<li data-label="내계정">
 			<ul>
+				<li>
+					<a href="./user_message.html" target="_blank" class="">쪽지 - 전체</a>
+					<a href="./user_message.html?tab=1" target="_blank" class="">쪽지 - 안읽음</a>
+					<a href="./user_message.html?tab=1" target="_blank" class="">쪽지 - 읽음</a>
+				</li>
+				<li><a href="./user_friendmng.html" target="_blank" class="">지인관리</a></li>
 			</ul>
 		</li>
 		<li data-label="이벤트">

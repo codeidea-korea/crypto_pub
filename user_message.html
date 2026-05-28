@@ -381,7 +381,6 @@
                             </div>
                         </div>
                     </div>
-                    
 
                 </div>
             </div>
@@ -396,6 +395,8 @@
     <script>
         $(window).on('load',function(){
             menuOn('menu_4','2');
+            let search = (window.location.search).split('=')[1];
+            $('.tab_box > a').eq(search).click();
         });
     </script>
 
