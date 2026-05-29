@@ -260,3 +260,16 @@ const openDetail = (item)=>{
     $(item).addClass('open').siblings().removeClass('open');
     $(item).next().addClass('detail_open').siblings().removeClass('detail_open');
 }
+
+//=======================================================
+//   클립보드 복사
+//=======================================================
+const copyToClipboard = (text)=>{
+    navigator.clipboard.writeText(text)
+        .then(() => {
+            alert('복사 완료')
+        })
+        .catch((err) => {
+            console.error('복사 실패', err);
+        });
+}

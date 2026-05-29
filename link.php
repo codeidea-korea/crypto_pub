@@ -134,6 +134,10 @@ echo txtRecord('./@record/');
 					<a href="./user_message.html?tab=1" target="_blank" class="">쪽지 - 읽음</a>
 				</li>
 				<li><a href="./user_friendmng.html" target="_blank" class="">지인관리</a></li>
+				<li>
+					<a href="./user_bettinghistory.html" target="_blank" class="">베팅내역</a>
+					<a href="./user_bettinghistory_nodata.html" target="_blank" class="">베팅내역 - 데이터 없을때</a>
+				</li>
 			</ul>
 		</li>
 		<li data-label="이벤트">

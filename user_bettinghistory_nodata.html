@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTO</title>
+    <link href="./dist/images/logo_icon.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <script>
+        (function(d) {
+            var config = {
+            kitId: 'tjz1wdv',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+</head>
+<body class="">
+    <div id="wrap">
+        
+        <div class="content">
+            <div class="content_box">
+                <div class="inner">
+                    
+                    <!-- 서브비주얼 -->
+                    <div class="sub_visual">
+                        <div class="txt_box">
+                            <span class="modish">Betting History</span>
+                            <h4 class="yoona">베팅내역</h4>
+                        </div>
+                        <img src="./dist/images/banner/sub_visual_icon.png" alt="">
+                    </div>
+
+                    <div class="flex">
+                        <div class="tab_box mt-14">
+                            <a href="javascript:;" class="active" onclick="tabChange(this)">슬롯</a>
+                            <a href="javascript:;" onclick="tabChange(this)">라이브 카지노</a>
+                            <a href="javascript:;" onclick="tabChange(this)">벳 게임즈</a>
+                            <a href="javascript:;" onclick="tabChange(this)">테이블 게임</a>
+                            <a href="javascript:;" onclick="tabChange(this)">미니 게임</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 mt-12">
+                        <div class="radio_custom">
+                            <input type="radio" id="all" name="type" checked><label for="all"><i></i>전체</label>
+                        </div>
+                        <div class="radio_custom">
+                            <input type="radio" id="krw" name="type"><label for="krw" class="krw"><i></i>KRW</label>
+                        </div>
+                        <div class="radio_custom">
+                            <input type="radio" id="usdt" name="type"><label for="usdt" class="usdt"><i></i>USDT</label>
+                        </div>
+                    </div>
+
+                    <div class="table_box lg:block hidden mt-7">
+                        <table class="table table-sm">
+                            <colgroup>
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="18%">
+                                <col width="18%">
+                                <col width="13%">
+                                <col width="13%">
+                                <col width="7%">
+                            </colgroup>
+                            <thead>
+                                <tr>
+                                    <th>베팅 날짜</th>
+                                    <th>제공사</th>
+                                    <th>게임 이름</th>
+                                    <th>베팅 ID</th>
+                                    <th>베팅 금액</th>
+                                    <th>당첨 금액</th>
+                                    <th>상태</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="nodata">
+                        <div class="flex flex-col items-center justify-center gap-4 py-12">
+                            <svg class="w-10 h-10 text-sub2"><use xlink:href="./dist/images/icon-defs.svg#message-off"></use></svg>
+                            <p class="text-basic">표시할 내역이 없습니다</p>
+                        </div>
+                    </div>
+
+                    <div class="lg:hidden block mt-5 table_list">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-3.7.1.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+
+    <script>
+        $(window).on('load',function(){
+            menuOn('menu_4','2');
+        });
+    </script>
+
+</body>
+</html>
