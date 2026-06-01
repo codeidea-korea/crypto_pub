@@ -139,5 +139,8 @@
     "/dist/images/game/slot/slot_8.png": "/dist/images/game/slot/slot_8.png",
     "/dist/images/event/event_detail.png": "/dist/images/event/event_detail.png",
     "/dist/images/btn/danger2_btn.png": "/dist/images/btn/danger2_btn.png",
-    "/dist/images/btn/danger2_btn_disabled.png": "/dist/images/btn/danger2_btn_disabled.png"
+    "/dist/images/btn/danger2_btn_disabled.png": "/dist/images/btn/danger2_btn_disabled.png",
+    "/dist/images/bg/info_data.png": "/dist/images/bg/info_data.png",
+    "/dist/images/bg/info_tit.png": "/dist/images/bg/info_tit.png",
+    "/dist/images/banner/affiliate_banner.png": "/dist/images/banner/affiliate_banner.png"
 }

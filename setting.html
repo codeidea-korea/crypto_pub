@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTO</title>
+    <link href="./dist/images/logo_icon.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <script>
+        (function(d) {
+            var config = {
+            kitId: 'tjz1wdv',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+</head>
+<body class="">
+    <div id="wrap">
+        
+        <div class="content">
+            <div class="content_box">
+                <div class="inner">
+                    
+                    <!-- 서브비주얼 -->
+                    <div class="sub_visual">
+                        <div class="txt_box">
+                            <span class="modish">Settings</span>
+                            <h4 class="yoona">설정</h4>
+                        </div>
+                        <img src="./dist/images/banner/sub_visual_icon.png" alt="">
+                    </div>
+
+                    <div class="flex">
+                        <div class="tab_box mt-14">
+                            <a href="javascript:;" class="active" onclick="tabChange(this)">회원 정보</a>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-5 mt-10">
+                        <div class="w-1/3">
+                            <div class="p-7 bg-[#1e1451] rounded">
+                                <div class="text-xl">회원 정보</div>
+                            </div>
+                            <div class="mt-5 p-7 bg-[#1e1451] rounded">
+                                <div class="text-xl">지갑주소</div>
+                            </div>
+                        </div>
+                        <div class="w-2/3 p-7 bg-[#1e1451] rounded">
+                            <div class="text-xl">비밀번호 변경</div>
+
+                            <div class="flex items-center gap-1.5 mt-2">
+                                <div class="shrink-0 w-32 text-basic">기존 비밀번호 <span class="text-error">*</span></div>
+                                <div class="relative w-full">
+                                    <input type="password" class="form-control" placeholder="기존 비밀번호*">
+                                    <button class="z-10 absolute right-3 top-1/2 -translate-y-1/2 p-2 text-sub" onclick="passwordView(this)"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#watch-off"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 mt-2">
+                                <div class="shrink-0 w-32 text-basic">새 비밀번호 <span class="text-error">*</span></div>
+                                <div class="relative w-full">
+                                    <input type="password" class="form-control" placeholder="새 비밀번호*">
+                                    <button class="z-10 absolute right-3 top-1/2 -translate-y-1/2 p-2 text-sub" onclick="passwordView(this)"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#watch-off"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 mt-2">
+                                <div class="shrink-0 w-32 text-basic">새 비밀번호 확인 <span class="text-error">*</span></div>
+                                <div class="relative w-full">
+                                    <input type="password" class="form-control" placeholder="새 비밀번호 확인*">
+                                    <button class="z-10 absolute right-3 top-1/2 -translate-y-1/2 p-2 text-sub" onclick="passwordView(this)"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#watch-off"></use></svg></button>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1.5 mt-2">
+                                <div class="shrink-0 w-32 text-basic">휴대폰 번호 <span class="text-error">*</span></div>
+                                <input type="text" class="form-control" placeholder="휴대폰 번호 *">
+                                <button class="btn btn_primary shrink-0 w-1/5 h-[42px] inactive text-sm md:text-base">인증</button>
+                            </div>
+                            <div class="flex items-center gap-1.5 mt-2">
+                                <div class="shrink-0 w-32 text-basic">인증번호 <span class="text-error">*</span></div>
+                                <div class="auth_num w-full">
+                                    <input type="text" class="form-control" placeholder="인증번호 *">
+                                    <div class="time text-xs text-center"><span class="block">남은 시간</span><span class="block count">3:00</span></div>
+                                </div>
+                                <button class="btn btn_primary type02 shrink-0 w-1/5 h-[42px] inactive text-sm md:text-base" disabled>확인</button>
+                            </div>
+
+                            <div class="mt-8 text-center">
+                                <button class="btn btn_primary_skew w-48 h-12"><span>변경하기</span></button>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-3.7.1.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+
+    <script>
+        $(window).on('load',function(){
+            menuOn('menu_4','8');
+        });
+    </script>
+
+</body>
+</html>

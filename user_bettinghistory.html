@@ -52,13 +52,13 @@
 
                     <div class="flex items-center gap-6 mt-12">
                         <div class="radio_custom">
-                            <input type="radio" id="all" name="type" checked><label for="all"><i></i>전체</label>
+                            <input type="radio" id="all" name="type" value="all" checked><label for="all"><i></i>전체</label>
                         </div>
                         <div class="radio_custom">
-                            <input type="radio" id="krw" name="type"><label for="krw" class="krw"><i></i>KRW</label>
+                            <input type="radio" id="krw" name="type" value="krw"><label for="krw" class="krw"><i></i>KRW</label>
                         </div>
                         <div class="radio_custom">
-                            <input type="radio" id="usdt" name="type"><label for="usdt" class="usdt"><i></i>USDT</label>
+                            <input type="radio" id="usdt" name="type" value="usdt"><label for="usdt" class="usdt"><i></i>USDT</label>
                         </div>
                     </div>
 
@@ -85,7 +85,7 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
+                                <tr data-type="usdt">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -104,7 +104,7 @@
                                     <td></td>
                                     <td class="text-center">진행중</td>
                                 </tr>
-                                <tr>
+                                <tr data-type="usdt">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -128,7 +128,7 @@
                                     </td>
                                     <td class="text-center text-error">취소</td>
                                 </tr>
-                                <tr class="disabled">
+                                <tr class="disabled" data-type="usdt">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -152,7 +152,7 @@
                                     </td>
                                     <td class="text-center text-error">취소</td>
                                 </tr>
-                                <tr>
+                                <tr data-type="krw">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -176,7 +176,7 @@
                                     </td>
                                     <td class="text-center text-success">당첨</td>
                                 </tr>
-                                <tr>
+                                <tr data-type="krw">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -200,7 +200,7 @@
                                     </td>
                                     <td class="text-center text-error">미당첨</td>
                                 </tr>
-                                <tr>
+                                <tr data-type="krw">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -224,7 +224,7 @@
                                     </td>
                                     <td class="text-center text-warning">적특</td>
                                 </tr>
-                                <tr>
+                                <tr data-type="krw">
                                     <td class="text-center">2026-03-19<br/>17:50:54</td>
                                     <td class="text-center">프라그마틱 라이브</td>
                                     <td class="text-center"><div class="truncate">슈가러시슈가슈가러시슈가슈가러시슈가</div></td>
@@ -271,7 +271,7 @@
                                     </div>
                                 </div>
                                 <div><span>당첨 금액</span></div>
-                                <div><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
+                                <div class="span2"><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
                             </dd>
                         </dl>
                         <dl>
@@ -298,7 +298,7 @@
                                         <p>0 원</p>
                                     </div>
                                 </div>
-                                <div><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
+                                <div class="span2"><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
                             </dd>
                         </dl>
                         <dl class="disabled">
@@ -319,7 +319,7 @@
                                     </div>
                                 </div>
                                 <div><span>당첨 금액</span><p>--</p></div>
-                                <div><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
+                                <div class="span2"><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
                             </dd>
                         </dl>
                         <dl>
@@ -346,7 +346,7 @@
                                         <p>1,400 원</p>
                                     </div>
                                 </div>
-                                <div><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
+                                <div class="span2"><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
                             </dd>
                         </dl>
                         <dl>
@@ -373,7 +373,7 @@
                                         <p>1,400 원</p>
                                     </div>
                                 </div>
-                                <div><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
+                                <div class="span2"><span>베팅 ID</span><p>95c3e5673f8c48b3af90733098510e71</p></div>
                             </dd>
                         </dl>
                     </div>
@@ -390,7 +390,44 @@
 
     <script>
         $(window).on('load',function(){
-            menuOn('menu_4','2');
+            menuOn('menu_4','4');
+        });
+
+        function bettingFilter(type) {
+            const filterType = type || 'all';
+
+            $('[data-type]').each(function () {
+                const itemType = $(this).data('type');
+
+                if (filterType === 'all' || itemType === filterType) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+
+            $(`input[name="type"][value="${filterType}"]`).prop('checked', true);
+        }
+
+        $(function () {
+            // ?krw / ?usdt / ?all 형태 대응
+            const search = window.location.search.replace('?', '').toLowerCase();
+            const initType = ['krw', 'usdt', 'all'].includes(search) ? search : 'all';
+
+            bettingFilter(initType);
+
+            $('input[name="type"]').on('change', function () {
+                const type = $(this).val();
+
+                bettingFilter(type);
+
+                // 주소도 ?krw 이런 식으로 변경
+                const newUrl = type === 'all'
+                    ? window.location.pathname
+                    : `${window.location.pathname}?${type}`;
+
+                history.replaceState(null, '', newUrl);
+            });
         });
     </script>
 

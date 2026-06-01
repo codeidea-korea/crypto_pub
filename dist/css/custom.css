@@ -7,6 +7,7 @@
     --color-sub:#5d648d;
     --color-sub2:#5d5cb5; 
     --color-sub3:#b6b5ff; 
+    --color-sub4:#1b1a4a; 
 
     --color-spurple:#cc99ff;
     --color-spurple2:#46198d;
@@ -47,6 +48,7 @@ body {font-family: "ds-endendend", sans-serif; background:#0e0f28 url('../images
 .bg-basic {background-color:var(--color-basic); }
 .bg-sub {background-color:var(--color-sub); }
 .bg-sub2 {background-color:var(--color-sub2); }
+.bg-sub4 {background-color:var(--color-sub4); }
 .bg-spurple2 {background-color:var(--color-spurple2); }
 
 .text-basic {color:var(--color-basic); }
@@ -243,7 +245,7 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
 
 
 .auth_num {position:relative; }
-.auth_num .time {position:absolute; right:1px; top:1px; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100px; height:calc(100% - 2px); color:var(--color-sub); background:url('../images/bg/auth_num_bg.png?0514') no-repeat center center / 100% 100%; }
+.auth_num .time {z-index:5; position:absolute; right:1px; top:1px; display:flex; flex-direction:column; align-items:center; justify-content:center; width:100px; height:calc(100% - 2px); color:var(--color-sub); background:url('../images/bg/auth_num_bg.png?0514') no-repeat center center / 100% 100%; }
 .auth_num .time .count {color:#976dc2; }
 .auth_num .form-control:focus + .time {right:2px; top:2px; height:calc(100% - 4px); width:99px; }
 
@@ -283,7 +285,7 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
             tab_box
 ---------------------------------------------- */
 .tab_box {display:flex; align-items:center; flex-wrap:wrap; padding:4px; background-color:#151a3d; clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px)); }
-.tab_box a {display:flex; align-items:center; justify-content:center; min-width:100px; height:42px; color:var(--color-basic); text-align:center; }
+.tab_box a {display:flex; align-items:center; justify-content:center; min-width:100px; height:42px; padding:0 20px; color:var(--color-basic); text-align:center; }
 .tab_box .active {color:#fff; background:url('../images/btn/slice_line_btn.png') no-repeat center center / 100% 100%; }
 
 @media all and (max-width:767px){
@@ -330,8 +332,18 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
 .table_list dl dd {z-index:1; position:relative; }
 .table_list dl dt {display:flex; align-items:center; padding:10px 18px; font-size:13px; background:linear-gradient(90deg,#1a235c 0%,#371d51 100%); }
 .table_list dl dd {display:grid; grid-template-columns:repeat(2,1fr); gap:5px; padding:10px 15px; }
+.table_list dl dd .span2 {grid-column:span 2; }
 .table_list dl dd span {font-size:12px; color:#5d648d; }
 .table_list dl dd p {font-size:13px; }
+
+
+/* ----------------------------------------------
+            moneylog
+---------------------------------------------- */
+.data_info {display:flex; width:300px; height:42px; background:url('../images/bg/info_data.png') no-repeat center center / 100% 100%; }
+.data_info dt {flex-shrink:0; display:flex; align-items:center; justify-content:center; min-width:84px; padding:0 15px; font-size:12px; background:url('../images/bg/info_tit.png') no-repeat center center / 100% 100%; }
+.data_info dd {display:flex; align-items:center; justify-content:center; width:100%; }
+
 
 /* ----------------------------------------------
             coin_box
@@ -766,3 +778,13 @@ footer .footer_wrap .fnb .menu_box ul li a {font-size:18px; }
 
 .event_detail {border:2px solid #4d03a3; background-color:#2f0f65; }
 
+
+/* ----------------------------------------------
+            policy_txt
+---------------------------------------------- */
+.policy_txt > div {position:relative; display:flex; align-items:flex-start; gap:5px; }
+.policy_txt i.num {color:var(--color-spurple); font-style:normal; }
+
+@media all and (max-width:767px){
+    .policy_txt {font-size:13px; }
+}

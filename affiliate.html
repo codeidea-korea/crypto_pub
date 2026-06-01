@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRYPTO</title>
+    <link href="./dist/images/logo_icon.png" rel="shortcut icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap" rel="stylesheet">
+
+    <script>
+        (function(d) {
+            var config = {
+            kitId: 'tjz1wdv',
+            scriptTimeout: 3000,
+            async: true
+            },
+            h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+        })(document);
+    </script>
+
+    <link rel="stylesheet" href="./dist/css/app.css" />
+    <link rel="stylesheet" href="./dist/css/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./dist/css/custom.css" />
+</head>
+<body class="">
+    <div id="wrap">
+
+        <div class="content">
+            <div class="content_box">
+                <div class="inner">
+                    <!-- 서브비주얼 -->
+                    <div class="sub_visual">
+                        <div class="txt_box">
+                            <span class="modish">Affiliates</span>
+                            <h4 class="yoona">제휴 프로그램</h4>
+                        </div>
+                        <img src="./dist/images/banner/sub_visual_icon.png" alt="">
+                    </div>
+
+                    <div class="flex">
+                        <div class="tab_box mt-14">
+                            <a href="javascript:;" class="active" onclick="tabChange(this)">개요</a>
+                            <a href="javascript:;" onclick="tabChange(this)">추천한 사용자</a>
+                        </div>
+                    </div>
+
+                    <div class="tab_content mt-7">
+                        <!-- 개요 -->
+                        <div class="active">
+                            <div class="flex flex-col-reverse lg:flex-row gap-10">
+                                <div class="w-full lg:w-1/2 px-3 lg:px-0">
+                                    <div class="mb-4 text-2xl">메인 파트너</div>
+                                    <div class="mb-7 text-basic">
+                                        <span class="text-spurple">CRYPTO</span> 의 제휴 프로그램에 참여하여 당사 브랜드를 추천하고 수익을 올리세요!<br/>
+                                        본인 링크로 접속하여 <span class="text-spurple">CRYPTO</span>에 가입하고 플레이하는 사용자 수만큼 제휴 수수료를 받을 수 있습니다.<br/><br/>
+
+                                        <span class="text-spurple">CRYPTO</span> 와 제휴를 한다는 건 여러분이 당사 카지노와 스포츠북에 있는 모든 베팅에 대해 수수료를
+                                        받는다는 의미입니다.이는 기존 제휴 프로그램과 다르게, 승패유무에 관계없이 항상 같은 커미션을
+                                        받는다는 의미이기도 합니다.<br/><br/>
+
+                                        동일한 IP 주소의 계정 레퍼럴은 인식되지 않습니다.
+                                    </div>
+                                    <div class="mb-2.5 text-base">추천인 링크</div>
+                                    <div class="flex items-center justify-between p-3 bg-sub4 rounded">
+                                        <p class="text-xs font-medium text-sub2">https://snake78.com/ko/reg?refCode=testpaul</p>
+                                        <button onclick="copyToClipboard('https://snake78.com/ko/reg?refCode=testpaul')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                    </div>
+                                    <div class="mt-5 mb-2.5 text-base">관련 이벤트</div>
+                                    <div class="flex items-center justify-between p-3 bg-sub4 rounded">
+                                        <p class="text-xs font-medium text-sub2">좋은건 알려야 제 맛, 지인추천</p>
+                                    </div>
+                                </div>
+                                <div class="w-full lg:w-1/2"><img src="./dist/images/banner/affiliate_banner.png" alt=""></div>
+                            </div>
+                        </div>
+
+                        <!-- 추천한 사용자 -->
+                        <div>
+                            <div class="table_box lg:block hidden mt-7">
+                                <table class="table table-sm">
+                                    <colgroup>
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                        <col width="20%">
+                                    </colgroup>
+                                    <thead>
+                                        <tr>
+                                            <th>가입일</th>
+                                            <th>사용자명</th>
+                                            <th>마지막 입금</th>
+                                            <th>총 입금액</th>
+                                            <th>베팅 금액</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center">한지성</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,506,362,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,000,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center">한지성</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,506,362,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,000,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center">한지성</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,506,362,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,000,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center">한지성</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,506,362,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,000,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center">한지성</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,506,362,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>1,000,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-krw">
+                                                    <svg class="w-5 h-5 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="lg:hidden block mt-5 table_list">
+                                <dl>
+                                    <dt>
+                                        <div class="flex items-center justify-between w-full">
+                                            <div>2026-04-01 17:12:12</div>
+                                            <div>한지성</div>
+                                        </div>
+                                    </dt>
+                                    <dd>
+                                        <div>
+                                            <span>마지막 입금</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,506,362,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>총 입금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,000,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>베팅금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>10,000 원</p>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <div class="flex items-center justify-between w-full">
+                                            <div>2026-04-01 17:12:12</div>
+                                            <div>한지성</div>
+                                        </div>
+                                    </dt>
+                                    <dd>
+                                        <div>
+                                            <span>마지막 입금</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,506,362,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>총 입금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,000,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>베팅금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>10,000 원</p>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                                <dl>
+                                    <dt>
+                                        <div class="flex items-center justify-between w-full">
+                                            <div>2026-04-01 17:12:12</div>
+                                            <div>한지성</div>
+                                        </div>
+                                    </dt>
+                                    <dd>
+                                        <div>
+                                            <span>마지막 입금</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,506,362,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>총 입금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>1,000,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>베팅금액</span>
+                                            <div class="flex items-center gap-1.5 text-krw">
+                                                <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>10,000 원</p>
+                                            </div>
+                                        </div>
+                                    </dd>
+                                </dl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="./dist/js/app.js"></script>
+    <script src="./dist/js/jquery-3.7.1.js"></script>
+    <script src="./dist/js/swiper-bundle.min.js"></script>
+    <script src="./dist/js/custom.js"></script>
+
+    <script>
+        $(window).on('load',function(){
+            menuOn('menu_6');
+            let search = (window.location.search).split('=')[1];
+            $('.tab_box > a').eq(search).click();
+        });
+    </script>
+
+</body>
+</html>
