@@ -104,6 +104,9 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('logout-modal')">로그아웃 모달</button>
 					<button class="pop-modal" onclick="modalOpen('delete-modal')">삭제 모달</button>
 				</li>
+				<li>
+					<button class="pop-modal" data-date="진행중" onclick="modalOpen('roulette-modal')">룰렛 모달</button>
+				</li>
 			</ul>
 		</li>
 		<li data-label="메인">
@@ -146,9 +149,21 @@ echo txtRecord('./@record/');
 					<a href="./user_bettinghistory_nodata.html" target="_blank" class="add">베팅내역 - 데이터 없을때</a>
 				</li>
 				<li>
-					<a href="./user_transactiondetail.html" target="_blank" class="add">거래내역 - 입금내역</a>
-					<a href="./user_transactiondetail.html?tab=1" target="_blank" class="add">거래내역 - 출금내역</a>
-					<a href="./user_transactiondetail.html?tab=2" target="_blank" class="add">거래내역 - 포인트 사용내역</a>
+					<ul>
+						<li>
+							<a href="./user_transactiondetail.html" target="_blank" class="add">거래내역 - 입금내역 : 전체</a>
+							<a href="./user_transactiondetail.html?tab=1&type=krw" target="_blank" class="add">거래내역 - 입금내역 : krw</a>
+							<a href="./user_transactiondetail.html?tab=1&type=usdt" target="_blank" class="add">거래내역 - 입금내역 : usdt</a>
+						</li>
+						<li>
+							<a href="./user_transactiondetail.html?tab=2" target="_blank" class="add">거래내역 - 출금내역 : 전체</a>
+							<a href="./user_transactiondetail.html?tab=2&type=krw" target="_blank" class="add">거래내역 - 출금내역 : krw</a>
+							<a href="./user_transactiondetail.html?tab=2&type=usdt" target="_blank" class="add">거래내역 - 출금내역 : usdt</a>
+						</li>
+						<li>
+							<a href="./user_transactiondetail.html?tab=3" target="_blank" class="add">거래내역 - 포인트 사용내역</a>
+						</li>
+					</ul>
 				</li>
 				<li>
 					<a href="./user_cryptobenefit.html" target="_blank" class="add">crypto 혜택</a>

@@ -48,20 +48,20 @@
                         </div>
                     </div>
 
-                    <div class="flex items-center gap-6 mt-12">
-                        <div class="radio_custom">
-                            <input type="radio" id="all" name="type" checked><label for="all"><i></i>전체</label>
-                        </div>
-                        <div class="radio_custom">
-                            <input type="radio" id="krw" name="type"><label for="krw" class="krw"><i></i>KRW</label>
-                        </div>
-                        <div class="radio_custom">
-                            <input type="radio" id="usdt" name="type"><label for="usdt" class="usdt"><i></i>USDT</label>
-                        </div>
-                    </div>
 
                     <div class="tab_content">
                         <div class="active">
+                            <div class="flex items-center gap-6 mt-12">
+                                <div class="radio_custom">
+                                    <input type="radio" id="all" name="type" value="all" checked><label for="all"><i></i>전체</label>
+                                </div>
+                                <div class="radio_custom">
+                                    <input type="radio" id="krw" name="type" value="krw"><label for="krw" class="krw"><i></i>KRW</label>
+                                </div>
+                                <div class="radio_custom">
+                                    <input type="radio" id="usdt" name="type" value="usdt"><label for="usdt" class="usdt"><i></i>USDT</label>
+                                </div>
+                            </div>
                             <div class="table_box lg:block hidden mt-7">
                                 <table class="table table-sm">
                                     <colgroup>
@@ -81,7 +81,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -98,7 +98,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -115,7 +115,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -132,7 +132,41 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-error">미완성</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="usdt">
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-usdt">
+                                                    <svg class="w-5 h-5 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5">
+                                                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#point"></use></svg>
+                                                    <span>1,000 P</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center text-success">완료</td>
+                                        </tr>
+                                        <tr data-type="usdt">
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-usdt">
+                                                    <svg class="w-5 h-5 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5">
+                                                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#point"></use></svg>
+                                                    <span>1,000 P</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center text-error">미완성</td>
+                                        </tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -149,7 +183,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -170,7 +204,7 @@
                                 </table>
                             </div>
                             <div class="lg:hidden block mt-5 table_list">
-                                <dl>
+                                <dl data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -195,7 +229,32 @@
                                         <div class="span2"><span>처리일시</span><p>2026-03-19 17:30:51</p></div>
                                     </dd>
                                 </dl>
-                                <dl class="disabled">
+                                <dl data-type="usdt">
+                                    <dt>
+                                        <div class="flex items-center justify-between w-full">
+                                            <div>2026-04-01 17:12:12</div>
+                                            <div class="text-success">완료</div>
+                                        </div>
+                                    </dt>
+                                    <dd>
+                                        <div>
+                                            <span>입금 금액</span>
+                                            <div class="flex items-center gap-1.5 text-usdt">
+                                                <svg class="w-4 h-4 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <p>10,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span>보너스 금액</span>
+                                            <div class="flex items-center gap-1.5">
+                                                <svg class="w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#point"></use></svg>
+                                                <p>1,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div class="span2"><span>처리일시</span><p>2026-03-19 17:30:51</p></div>
+                                    </dd>
+                                </dl>
+                                <dl class="disabled" data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -220,7 +279,7 @@
                                         <div class="span2"><span>처리일시</span><p>--</p></div>
                                     </dd>
                                 </dl>
-                                <dl>
+                                <dl data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -248,6 +307,17 @@
                             </div>
                         </div>
                         <div>
+                            <div class="flex items-center gap-6 mt-12">
+                                <div class="radio_custom">
+                                    <input type="radio" id="all2" name="type2" value="all" checked><label for="all2"><i></i>전체</label>
+                                </div>
+                                <div class="radio_custom">
+                                    <input type="radio" id="krw2" name="type2" value="krw"><label for="krw2" class="krw"><i></i>KRW</label>
+                                </div>
+                                <div class="radio_custom">
+                                    <input type="radio" id="usdt2" name="type2" value="usdt"><label for="usdt2" class="usdt"><i></i>USDT</label>
+                                </div>
+                            </div>
                             <div class="table_box lg:block hidden mt-7">
                                 <table class="table table-sm">
                                     <colgroup>
@@ -265,7 +335,7 @@
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -276,7 +346,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -287,7 +357,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -298,7 +368,29 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-error">미완성</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="usdt">
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-usdt">
+                                                    <svg class="w-5 h-5 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center text-success">완료</td>
+                                        </tr>
+                                        <tr data-type="usdt">
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td>
+                                                <div class="flex items-center justify-center gap-2.5 text-usdt">
+                                                    <svg class="w-5 h-5 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                    <span>10,000 원</span>
+                                                </div>
+                                            </td>
+                                            <td class="text-center">2026-03-19<br/>17:50:54</td>
+                                            <td class="text-center text-error">미완성</td>
+                                        </tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -309,7 +401,7 @@
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td class="text-center text-success">완료</td>
                                         </tr>
-                                        <tr>
+                                        <tr data-type="krw">
                                             <td class="text-center">2026-03-19<br/>17:50:54</td>
                                             <td>
                                                 <div class="flex items-center justify-center gap-2.5 text-krw">
@@ -324,7 +416,7 @@
                                 </table>
                             </div>
                             <div class="lg:hidden block mt-5 table_list">
-                                <dl>
+                                <dl data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -342,7 +434,7 @@
                                         <div><span>처리일시</span><p>2026-03-19 17:30:51</p></div>
                                     </dd>
                                 </dl>
-                                <dl class="disabled">
+                                <dl class="disabled" data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -360,7 +452,7 @@
                                         <div><span>처리일시</span><p>2026-03-19 17:30:51</p></div>
                                     </dd>
                                 </dl>
-                                <dl>
+                                <dl data-type="krw">
                                     <dt>
                                         <div class="flex items-center justify-between w-full">
                                             <div>2026-04-01 17:12:12</div>
@@ -372,6 +464,24 @@
                                             <span>출금 금액</span>
                                             <div class="flex items-center gap-1.5 text-krw">
                                                 <svg class="w-4 h-4 krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                                <p>10,000 원</p>
+                                            </div>
+                                        </div>
+                                        <div><span>처리일시</span><p>2026-03-19 17:30:51</p></div>
+                                    </dd>
+                                </dl>
+                                <dl data-type="usdt">
+                                    <dt>
+                                        <div class="flex items-center justify-between w-full">
+                                            <div>2026-04-01 17:12:12</div>
+                                            <div class="text-warning">진행중</div>
+                                        </div>
+                                    </dt>
+                                    <dd>
+                                        <div>
+                                            <span>출금 금액</span>
+                                            <div class="flex items-center gap-1.5 text-usdt">
+                                                <svg class="w-4 h-4 usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
                                                 <p>10,000 원</p>
                                             </div>
                                         </div>
@@ -579,10 +689,59 @@
     <script src="./dist/js/custom.js"></script>
 
     <script>
-        $(window).on('load',function(){
-            menuOn('menu_4','5');
+        $(function(){
+
+            const params = new URLSearchParams(location.search);
+            const tab = (parseInt(params.get('tab')) || 1) - 1;
+            const type = params.get('type') || 'all';
+
+            $('.tab_box a').eq(tab).addClass('active').siblings().removeClass('active');
+            $('.tab_content > div').eq(tab).addClass('active').siblings().removeClass('active');
+
+            const $currentTab = $('.tab_content > div').eq(tab);
+
+            $currentTab.find(`input[value="${type}"]`).prop('checked', true);
+
+            filter($currentTab, type);
+
+            function filter($tab, type){
+                $tab.find('[data-type]').toggle(type === 'all');
+
+                if(type !== 'all'){
+                    $tab.find(`[data-type="${type}"]`).show();
+                }
+            }
+
+            function updateUrl(tabIdx, type){
+                history.replaceState(
+                    null,
+                    '',
+                    `?tab=${tabIdx + 1}${type !== 'all' ? '&type=' + type : ''}`
+                );
+            }
+
+            $('.tab_box a').click(function(){
+                const idx = $(this).index();
+                const $tab = $('.tab_content > div').eq(idx);
+                const type = $tab.find(':radio:checked').val() || 'all';
+
+                $(this).addClass('active').siblings().removeClass('active');
+                $tab.addClass('active').siblings().removeClass('active');
+
+                filter($tab, type);
+                updateUrl(idx, type);
+            });
+
+            $('.tab_content :radio').change(function(){
+                const $tab = $(this).closest('.tab_content > div');
+                const idx = $('.tab_content > div').index($tab);
+
+                filter($tab, $(this).val());
+                updateUrl(idx, $(this).val());
+            });
+
         });
-    </script>
+</script>
 
 </body>
 </html>
