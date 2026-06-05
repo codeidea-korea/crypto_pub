@@ -142,5 +142,21 @@
     "/dist/images/btn/danger2_btn_disabled.png": "/dist/images/btn/danger2_btn_disabled.png",
     "/dist/images/bg/info_data.png": "/dist/images/bg/info_data.png",
     "/dist/images/bg/info_tit.png": "/dist/images/bg/info_tit.png",
-    "/dist/images/banner/affiliate_banner.png": "/dist/images/banner/affiliate_banner.png"
+    "/dist/images/banner/affiliate_banner.png": "/dist/images/banner/affiliate_banner.png",
+    "/dist/images/btn/roulette_btn.png": "/dist/images/btn/roulette_btn.png",
+    "/dist/images/roulette/center_spin.png": "/dist/images/roulette/center_spin.png",
+    "/dist/images/roulette/elements.png": "/dist/images/roulette/elements.png",
+    "/dist/images/roulette/girl.png": "/dist/images/roulette/girl.png",
+    "/dist/images/roulette/light_1.png": "/dist/images/roulette/light_1.png",
+    "/dist/images/roulette/light_2.png": "/dist/images/roulette/light_2.png",
+    "/dist/images/roulette/lights.png": "/dist/images/roulette/lights.png",
+    "/dist/images/roulette/outer_border.png": "/dist/images/roulette/outer_border.png",
+    "/dist/images/roulette/roulette_bg_10.png": "/dist/images/roulette/roulette_bg_10.png",
+    "/dist/images/roulette/roulette_bg_6.png": "/dist/images/roulette/roulette_bg_6.png",
+    "/dist/images/roulette/roulette_bg_7.png": "/dist/images/roulette/roulette_bg_7.png",
+    "/dist/images/roulette/roulette_bg_8.png": "/dist/images/roulette/roulette_bg_8.png",
+    "/dist/images/roulette/roulette_bg_9.png": "/dist/images/roulette/roulette_bg_9.png",
+    "/dist/images/roulette/spindle.png": "/dist/images/roulette/spindle.png",
+    "/dist/images/icon/profile_1.png": "/dist/images/icon/profile_1.png",
+    "/dist/images/icon/profile_2.png": "/dist/images/icon/profile_2.png"
 }

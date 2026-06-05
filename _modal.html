@@ -609,6 +609,113 @@
     </div> 
 </div>
 
+<!-- 1:1문의 모달 : 답변가능 -->
+<div id="inquiry-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg>
+                    <span class="text-base text-white font-medium">1:1 문의</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('inquiry-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-4 md:px-8 pb-10 pt-3">
+                <div class="chat_body">
+                    <div class="chat_body_wrap">
+                        <div class="text-center py-2 md:py-3">4월 3일, 2026</div>
+                        <div class="chat_item">
+                            <div class="name">컨설턴트</div>
+                            <div class="chat_cont">
+                                <div class="img_box"><img src="./dist/images/icon/profile_1.png" alt=""></div>
+                                <div class="txt_box">
+                                    <div class="txt">
+                                        안녕하세요. 플레이어님의 안내를 도와드릴 CRYPTO 컨설턴트입니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date">2025-10-13 13:39:31</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_form">
+                    <div class="flex-1 relative">
+                        <input type="text" value="안녕하세요..">
+                        <div class="disabled_box flex items-center gap-1.5 w-full text-xs md:text-[15px] text-basic">
+                            <svg class="w-3 h-3 md:w-5 md:h-5 text-[#f6cf3b]"><use xlink:href="./dist/images/icon-defs.svg#warning"></use></svg>
+                            답변 대기 중입니다. 답변 완료 후 이용해 주세요.
+                        </div>
+                    </div>
+                    <button><svg class="w-10 h-10"><use xlink:href="./dist/images/icon-defs.svg#send"></use></svg></button>
+                </div>
+            </div> 
+        </div>
+    </div> 
+</div>
+
+<!-- 1:1문의 모달 : 답변불가능 -->
+<div id="inquiry2-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg>
+                    <span class="text-base text-white font-medium">1:1 문의</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('inquiry2-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-4 md:px-8 pb-10 pt-3">
+                <div class="chat_body">
+                    <div class="chat_body_wrap">
+                        <div class="text-center py-2 md:py-3">4월 3일, 2026</div>
+                        <div class="chat_item">
+                            <div class="name">컨설턴트</div>
+                            <div class="chat_cont">
+                                <div class="img_box"><img src="./dist/images/icon/profile_1.png" alt=""></div>
+                                <div class="txt_box">
+                                    <div class="txt">
+                                        안녕하세요. 플레이어님의 안내를 도와드릴 CRYPTO 컨설턴트입니다.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date">2025-10-13 13:39:31</div>
+                        </div>
+                        <div class="chat_item right_type">
+                            <div class="name">한지성</div>
+                            <div class="chat_cont">
+                                <div class="img_box"><img src="./dist/images/icon/profile_2.png" alt=""></div>
+                                <div class="txt_box">
+                                    <div class="txt">
+                                        안녕하세요. 플레이어님의 안내를 도와드릴 CRYPTO 서포터입니다.^^<br/><br/>
+                                        감사합니다
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="date">2025-10-13 13:39:31</div>
+                        </div>
+                        <div class="flex items-center justify-center gap-1.5 w-full text-xs md:text-[15px] text-basic my-5 md:my-10">
+                            <svg class="w-3 h-3 md:w-5 md:h-5 text-[#f6cf3b]"><use xlink:href="./dist/images/icon-defs.svg#warning"></use></svg>
+                            답변 대기 중입니다. 답변 완료 후 이용해 주세요.
+                        </div>
+                    </div>
+                </div>
+                <div class="chat_form">
+                    <div class="flex-1 relative">
+                        <input type="text" disabled>
+                        <div class="disabled_box flex items-center gap-1.5 w-full text-xs md:text-[15px] text-basic">
+                            <svg class="w-3 h-3 md:w-5 md:h-5 text-[#f6cf3b]"><use xlink:href="./dist/images/icon-defs.svg#warning"></use></svg>
+                            답변 대기 중입니다. 답변 완료 후 이용해 주세요.
+                        </div>
+                    </div>
+                    <button disabled><svg class="w-10 h-10"><use xlink:href="./dist/images/icon-defs.svg#send"></use></svg></button>
+                </div>
+            </div> 
+        </div>
+    </div> 
+</div>
+
+<!-- 지갑모달 -->
+
 <!--------------------------------------------
     ALERT
 -------------------------------------------->
@@ -698,12 +805,12 @@
 <!--------------------------------------------
     룰렛
 -------------------------------------------->
-<!-- 룰렛 모달 -->
-<div id="roulette-modal" class="modal show" tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;">
+<!-- 룰렛 모달 : 티켓없을떄 -->
+<div id="roulette_noticket-modal" class="modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog lg">
         <div class="modal-content">
             <div class="roulette_box">
-                <button class="close_btn" onclick="modalClose('roulette-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <button class="close_btn" onclick="modalClose('roulette_noticket-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
                 <div class="tit_box">
                     <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
                     <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
@@ -739,7 +846,85 @@
                     <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
                     <button class="spin_btn"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
                     <div class="rotate_area">
+                        <img class="bg" src="./dist/images/roulette/roulette_bg_9.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                        <div class="items">300 P</div>
+                        <div class="items type_2">1,000 P</div>
+                        <div class="items type_3">100 P</div>
+                    </div>
+                    <img class="elements" src="./dist/images/roulette/elements.png" alt="">
+                    <img class="girl" src="./dist/images/roulette/girl.png" alt="">
+                </div>
+
+                <div class="bot_txt">
+                    <div class="txt">남은 티켓이 없습니다.</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- 룰렛 모달 : 10분할 -->
+<div id="roulette_10-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog lg">
+        <div class="modal-content">
+            <div class="roulette_box">
+                <button class="close_btn" onclick="modalClose('roulette_10-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="tit_box">
+                    <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
+                    <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
+                </div>
+                <div class="roulette_area">
+                    <img class="pointer" src="./dist/images/roulette/spindle.png" alt="">
+                    <div class="light">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/lights.png" alt="">
+                    </div>
+                    <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
+                    <button class="spin_btn" onclick="rouletteStart(this)"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
+                    <div class="rotate_area">
                         <img class="bg" src="./dist/images/roulette/roulette_bg_10.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                        <div class="items">300 P</div>
+                        <div class="items type_2">1,000 P</div>
+                        <div class="items type_3">100 P</div>
+                        <div class="items type_2">300 P</div>
                     </div>
                     <img class="elements" src="./dist/images/roulette/elements.png" alt="">
                     <img class="girl" src="./dist/images/roulette/girl.png" alt="">
@@ -754,7 +939,271 @@
     </div> 
 </div>
 
+<!-- 룰렛 모달 : 9분할 -->
+<div id="roulette_9-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog lg">
+        <div class="modal-content">
+            <div class="roulette_box">
+                <button class="close_btn" onclick="modalClose('roulette_9-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="tit_box">
+                    <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
+                    <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
+                </div>
+                <div class="roulette_area">
+                    <img class="pointer" src="./dist/images/roulette/spindle.png" alt="">
+                    <div class="light">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/lights.png" alt="">
+                    </div>
+                    <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
+                    <button class="spin_btn" onclick="rouletteStart(this)"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
+                    <div class="rotate_area">
+                        <img class="bg" src="./dist/images/roulette/roulette_bg_9.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                        <div class="items">300 P</div>
+                        <div class="items type_2">1,000 P</div>
+                        <div class="items type_3">100 P</div>
+                    </div>
+                    <img class="elements" src="./dist/images/roulette/elements.png" alt="">
+                    <img class="girl" src="./dist/images/roulette/girl.png" alt="">
+                </div>
+
+                <div class="bot_txt">
+                    <div class="txt">당첨 포인트는 <b>10,000 P</b> 입니다.</div>
+                    <div class="btn btn_primary_skew active"><svg class=""><use xlink:href="./dist/images/icon-defs.svg#ticket"></use></svg>티켓 : 2장</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- 룰렛 모달 : 8분할 -->
+<div id="roulette_8-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog lg">
+        <div class="modal-content">
+            <div class="roulette_box">
+                <button class="close_btn" onclick="modalClose('roulette_8-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="tit_box">
+                    <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
+                    <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
+                </div>
+                <div class="roulette_area">
+                    <img class="pointer" src="./dist/images/roulette/spindle.png" alt="">
+                    <div class="light">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/lights.png" alt="">
+                    </div>
+                    <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
+                    <button class="spin_btn" onclick="rouletteStart(this)"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
+                    <div class="rotate_area">
+                        <img class="bg" src="./dist/images/roulette/roulette_bg_8.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                        <div class="items">300 P</div>
+                        <div class="items type_2">1,000 P</div>
+                    </div>
+                    <img class="elements" src="./dist/images/roulette/elements.png" alt="">
+                    <img class="girl" src="./dist/images/roulette/girl.png" alt="">
+                </div>
+
+                <div class="bot_txt">
+                    <div class="txt">당첨 포인트는 <b>10,000 P</b> 입니다.</div>
+                    <div class="btn btn_primary_skew active"><svg class=""><use xlink:href="./dist/images/icon-defs.svg#ticket"></use></svg>티켓 : 2장</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- 룰렛 모달 : 7분할 -->
+<div id="roulette_7-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog lg">
+        <div class="modal-content">
+            <div class="roulette_box">
+                <button class="close_btn" onclick="modalClose('roulette_7-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="tit_box">
+                    <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
+                    <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
+                </div>
+                <div class="roulette_area">
+                    <img class="pointer" src="./dist/images/roulette/spindle.png" alt="">
+                    <div class="light">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/lights.png" alt="">
+                    </div>
+                    <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
+                    <button class="spin_btn" onclick="rouletteStart(this)"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
+                    <div class="rotate_area">
+                        <img class="bg" src="./dist/images/roulette/roulette_bg_7.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                        <div class="items type_2">300 P</div>
+                    </div>
+                    <img class="elements" src="./dist/images/roulette/elements.png" alt="">
+                    <img class="girl" src="./dist/images/roulette/girl.png" alt="">
+                </div>
+
+                <div class="bot_txt">
+                    <div class="txt">당첨 포인트는 <b>10,000 P</b> 입니다.</div>
+                    <div class="btn btn_primary_skew active"><svg class=""><use xlink:href="./dist/images/icon-defs.svg#ticket"></use></svg>티켓 : 2장</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+<!-- 룰렛 모달 : 6분할 -->
+<div id="roulette_6-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog lg">
+        <div class="modal-content">
+            <div class="roulette_box">
+                <button class="close_btn" onclick="modalClose('roulette_6-modal')"><svg><use xlink:href="./dist/images/icon-defs.svg#close"></use></svg></button>
+                <div class="tit_box">
+                    <div class="tit yoona">꽝없는 <span>룰렛이벤트</span></div>
+                    <div class="desc">보너스 룰렛을 돌려 포인트 받아가세요</div>
+                </div>
+                <div class="roulette_area">
+                    <img class="pointer" src="./dist/images/roulette/spindle.png" alt="">
+                    <div class="light">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/light_2.png" alt="">
+                        <img src="./dist/images/roulette/light_1.png" alt="">
+                        <img src="./dist/images/roulette/lights.png" alt="">
+                    </div>
+                    <img class="outer" src="./dist/images/roulette/outer_border.png" alt="">
+                    <button class="spin_btn" onclick="rouletteStart(this)"><img src="./dist/images/roulette/center_spin.png" alt=""></button>
+                    <div class="rotate_area">
+                        <img class="bg" src="./dist/images/roulette/roulette_bg_6.png" alt="">
+                    </div>
+                    <div class="rotate_point rix">
+                        <div class="items">1,200 P</div>
+                        <div class="items type_2">1,200 P</div>
+                        <div class="items type_3">1,100 P</div>
+                        <div class="items">50 P</div>
+                        <div class="items type_2">500 P</div>
+                        <div class="items type_3">400 P</div>
+                    </div>
+                    <img class="elements" src="./dist/images/roulette/elements.png" alt="">
+                    <img class="girl" src="./dist/images/roulette/girl.png" alt="">
+                </div>
+
+                <div class="bot_txt">
+                    <div class="txt">당첨 포인트는 <b>10,000 P</b> 입니다.</div>
+                    <div class="btn btn_primary_skew active"><svg class=""><use xlink:href="./dist/images/icon-defs.svg#ticket"></use></svg>티켓 : 2장</div>
+                </div>
+            </div>
+        </div>
+    </div> 
+</div>
+
+
 <script>
+    // 불빛
     const lights = document.querySelectorAll('.light img:not(:last-child)');
     let current = 0;
     setInterval(() => {
@@ -764,5 +1213,52 @@
         }
         current = (current + 1) % lights.length;
     }, 40);
+
+    // 룰렛돌리기
+    function rouletteStart(btn) {
+        const $roulette = $(btn).closest('.roulette_area');
+
+        if ($roulette.hasClass('rolling')) return;
+
+        $roulette.addClass('rolling');
+
+        const prizeIndex = Math.floor(Math.random() * 9);
+        const sectorDeg = 360 / 8.3;
+
+        let currentRotate = $roulette.data('rotate') || 0;
+        currentRotate += 360 * 3 + (360 - prizeIndex * sectorDeg);
+
+        $roulette.data('rotate', currentRotate);
+
+        $roulette.find('.rotate_area, .rotate_point').css({
+            transition: 'transform 5s cubic-bezier(.15,.85,.15,1)',
+            transform: `rotate(${currentRotate}deg)`
+        });
+
+        setTimeout(() => {
+            $roulette.removeClass('rolling');
+        }, 5000);
+    }
+
+    // 룰렛갯수
+    function setRouletteText($roulette){
+        const $items = $roulette.find('.items');
+        const count = $items.length;
+
+        const step = 360 / count;
+        const start = step / 2;
+
+        $items.each(function(index){
+            const deg = start + (step * index);
+
+            $(this).css(
+                'transform',
+                `translate(-50%,-50%) rotate(${deg}deg) translateY(-485%) rotate(270deg)`
+            );
+        });
+    }
+
+    $('.rotate_point').each(function(){
+        setRouletteText($(this));
+    });
 </script>
-ㅈ

@@ -105,7 +105,16 @@ echo txtRecord('./@record/');
 					<button class="pop-modal" onclick="modalOpen('delete-modal')">삭제 모달</button>
 				</li>
 				<li>
-					<button class="pop-modal" data-date="진행중" onclick="modalOpen('roulette-modal')">룰렛 모달</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_noticket-modal')">룰렛 모달 : 티켓없을때</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_10-modal')">룰렛 모달 : 10분할</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_9-modal')">룰렛 모달 : 9분할</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_8-modal')">룰렛 모달 : 8분할</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_7-modal')">룰렛 모달 : 7분할</button>
+					<button class="pop-modal add" onclick="modalOpen('roulette_6-modal')">룰렛 모달 : 6분할</button>
+				</li>
+				<li>
+					<button class="pop-modal add" onclick="modalOpen('inquiry-modal')">1:1 문의 모달 : 답변가능</button>
+					<button class="pop-modal add" onclick="modalOpen('inquiry2-modal')">1:1 문의 모달 : 답변대기중</button>
 				</li>
 			</ul>
 		</li>
@@ -121,7 +130,7 @@ echo txtRecord('./@record/');
 				<li>
 					<a href="./casino_live.html" target="_blank" class="">라이브 카지노</a>
 					<ul>
-						<li><a href="./casino_detail.html" target="_blank" class="add">게임상세</a></li>
+						<li><a href="./casino_detail.html" target="_blank" class="">게임상세</a></li>
 					</ul>
 				</li>
 				<li><a href="./casino_slot.html" target="_blank" class="">슬롯</a></li>
@@ -143,36 +152,38 @@ echo txtRecord('./@record/');
 				</li>
 				<li><a href="./user_friendmng.html" target="_blank" class="">지인관리</a></li>
 				<li>
-					<a href="./user_bettinghistory.html" target="_blank" class="add">베팅내역</a>
-					<a href="./user_bettinghistory.html?krw" target="_blank" class="add">베팅내역 - KRW</a>
-					<a href="./user_bettinghistory.html?usdt" target="_blank" class="add">베팅내역 - USDT</a>
-					<a href="./user_bettinghistory_nodata.html" target="_blank" class="add">베팅내역 - 데이터 없을때</a>
+					<a href="./user_bettinghistory.html" target="_blank" class="">베팅내역</a>
+					<a href="./user_bettinghistory.html?krw" target="_blank" class="">베팅내역 - KRW</a>
+					<a href="./user_bettinghistory.html?usdt" target="_blank" class="">베팅내역 - USDT</a>
+					<a href="./user_bettinghistory_nodata.html" target="_blank" class="">베팅내역 - 데이터 없을때</a>
 				</li>
 				<li>
 					<ul>
 						<li>
-							<a href="./user_transactiondetail.html" target="_blank" class="add">거래내역 - 입금내역 : 전체</a>
-							<a href="./user_transactiondetail.html?tab=1&type=krw" target="_blank" class="add">거래내역 - 입금내역 : krw</a>
-							<a href="./user_transactiondetail.html?tab=1&type=usdt" target="_blank" class="add">거래내역 - 입금내역 : usdt</a>
+							<a href="./user_transactiondetail.html" target="_blank" class="">거래내역 - 입금내역 : 전체</a>
+							<a href="./user_transactiondetail.html?tab=1&type=krw" target="_blank" class="">거래내역 - 입금내역 : krw</a>
+							<a href="./user_transactiondetail.html?tab=1&type=usdt" target="_blank" class="">거래내역 - 입금내역 : usdt</a>
 						</li>
 						<li>
-							<a href="./user_transactiondetail.html?tab=2" target="_blank" class="add">거래내역 - 출금내역 : 전체</a>
-							<a href="./user_transactiondetail.html?tab=2&type=krw" target="_blank" class="add">거래내역 - 출금내역 : krw</a>
-							<a href="./user_transactiondetail.html?tab=2&type=usdt" target="_blank" class="add">거래내역 - 출금내역 : usdt</a>
+							<a href="./user_transactiondetail.html?tab=2" target="_blank" class="">거래내역 - 출금내역 : 전체</a>
+							<a href="./user_transactiondetail.html?tab=2&type=krw" target="_blank" class="">거래내역 - 출금내역 : krw</a>
+							<a href="./user_transactiondetail.html?tab=2&type=usdt" target="_blank" class="">거래내역 - 출금내역 : usdt</a>
 						</li>
 						<li>
-							<a href="./user_transactiondetail.html?tab=3" target="_blank" class="add">거래내역 - 포인트 사용내역</a>
+							<a href="./user_transactiondetail.html?tab=3" target="_blank" class="">거래내역 - 포인트 사용내역</a>
 						</li>
 					</ul>
 				</li>
 				<li>
-					<a href="./user_cryptobenefit.html" target="_blank" class="add">crypto 혜택</a>
+					<a href="./user_cryptobenefit.html" target="_blank" class="">crypto 혜택</a>
 				</li>
 				<li>
-					<a href="./user_moneylog.html" target="_blank" class="add">머니로그 : 롤링</a>
+					<a href="./user_moneylog.html" target="_blank" class="">머니로그 : 롤링</a>
 				</li>
 				<li>
-					<a href="./setting.html" target="_blank" class="add" data-date="진행중">설정 - 회원정보</a>
+					<a href="./setting.html" target="_blank" class="add">설정 - 회원정보 : krw,usdt 등록 안했을때</a>
+					<a href="./setting.html?tab=1" target="_blank" class="add">설정 - 회원정보 : krw,udst 승인대기중</a>
+					<a href="./setting.html?tab=1" target="_blank" class="add">설정 - 회원정보 : krw,udst 등록완료</a>
 				</li>
 			</ul>
 		</li>
@@ -185,23 +196,23 @@ echo txtRecord('./@record/');
 		<li data-label="지인추천">
 			<ul>
 				<li>
-					<a href="./user_affiliate.html" target="_blank" class="add">제휴 프로그램 - 개요</a>
-					<a href="./user_affiliate.html?tab=1" target="_blank" class="add">제휴 프로그램 - 추천한 사용자</a>
+					<a href="./user_affiliate.html" target="_blank" class="">제휴 프로그램 - 개요</a>
+					<a href="./user_affiliate.html?tab=1" target="_blank" class="">제휴 프로그램 - 추천한 사용자</a>
 				</li>
 			</ul>
 		</li>
 		<li data-label="우리에 대해">
 			<ul>
 				<li>
-					<a href="./aboutus.html" target="_blank" class="add">우리에 대해 - 회원정보</a>
-					<a href="./aboutus.html?tab=1" target="_blank" class="add">우리에 대해 - 자금 세탁 방지</a>
-					<a href="./aboutus.html?tab=2" target="_blank" class="add">우리에 대해 - 개인정보 보호 정책</a>
-					<a href="./aboutus.html?tab=3" target="_blank" class="add">우리에 대해 - 암호화폐 코인 가이드</a>
+					<a href="./aboutus.html" target="_blank" class="">우리에 대해 - 회원정보</a>
+					<a href="./aboutus.html?tab=1" target="_blank" class="">우리에 대해 - 자금 세탁 방지</a>
+					<a href="./aboutus.html?tab=2" target="_blank" class="">우리에 대해 - 개인정보 보호 정책</a>
+					<a href="./aboutus.html?tab=3" target="_blank" class="">우리에 대해 - 암호화폐 코인 가이드</a>
 				</li>
 				<li>
-					<a href="./aboutus.html?tab=4" target="_blank" class="add">우리에 대해 - 제공자 가용성 정책</a>
-					<a href="./aboutus.html?tab=5" target="_blank" class="add">우리에 대해 - 스포츠 규정 및 정책</a>
-					<a href="./aboutus.html?tab=6" target="_blank" class="add">우리에 대해 - 자체 정지 정책</a>
+					<a href="./aboutus.html?tab=4" target="_blank" class="">우리에 대해 - 제공자 가용성 정책</a>
+					<a href="./aboutus.html?tab=5" target="_blank" class="">우리에 대해 - 스포츠 규정 및 정책</a>
+					<a href="./aboutus.html?tab=6" target="_blank" class="">우리에 대해 - 자체 정지 정책</a>
 				</li>
 			</ul>
 		</li>
