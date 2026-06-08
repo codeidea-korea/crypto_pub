@@ -158,5 +158,11 @@
     "/dist/images/roulette/roulette_bg_9.png": "/dist/images/roulette/roulette_bg_9.png",
     "/dist/images/roulette/spindle.png": "/dist/images/roulette/spindle.png",
     "/dist/images/icon/profile_1.png": "/dist/images/icon/profile_1.png",
-    "/dist/images/icon/profile_2.png": "/dist/images/icon/profile_2.png"
+    "/dist/images/icon/profile_2.png": "/dist/images/icon/profile_2.png",
+    "/dist/images/btn/price_btn.png": "/dist/images/btn/price_btn.png",
+    "/dist/images/btn/price_btn_active.png": "/dist/images/btn/price_btn_active.png",
+    "/dist/images/bg/auth_num_btn_bg.png": "/dist/images/bg/auth_num_btn_bg.png",
+    "/dist/images/bg/switch_bg.png": "/dist/images/bg/switch_bg.png",
+    "/dist/images/bg/auth_num_slash.png": "/dist/images/bg/auth_num_slash.png",
+    "/dist/images/bg/auth_num_slash2.png": "/dist/images/bg/auth_num_slash2.png"
 }

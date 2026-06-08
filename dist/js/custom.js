@@ -126,7 +126,26 @@ const sideMenu = ()=>{
 
 }
 const footerScript = ()=>{}
-const loadJquery = ()=>{}
+const loadJquery = ()=>{
+            
+    // input width 변경
+    window.autoWidthInput = (input) => {
+        const sizer = input.parentNode.querySelector('.inputSizer');
+        const style = getComputedStyle(input);
+
+        sizer.style.font = style.font;
+        sizer.style.letterSpacing = style.letterSpacing;
+        sizer.textContent = input.value || input.placeholder || '0';
+
+        input.style.width = `${sizer.offsetWidth + 24}px`;
+    };
+
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.dynamic_input input').forEach(input => {
+            autoWidthInput(input);
+        });
+    });
+}
 
 // 메뉴오픈
 const menuOn = (depth1,depth2)=>{
@@ -249,8 +268,9 @@ document.addEventListener('click',(e)=>{
 //=======================================================
 const tabChange = (item)=>{
     let liN = $(item).index();
-    $(item).addClass('active').siblings().removeClass('active');
-    $('.tab_content > div').eq(liN).addClass('active').siblings().removeClass('active');
+    let content = $(item).parents('.flex').siblings('.tab_content');
+        $(item).addClass('active').siblings().removeClass('active');
+        content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
 }
 
 //=======================================================
