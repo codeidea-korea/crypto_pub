@@ -116,6 +116,19 @@ echo txtRecord('./@record/');
 					<button class="pop-modal add" onclick="modalOpen('inquiry-modal')">1:1 문의 모달 : 답변가능</button>
 					<button class="pop-modal add" onclick="modalOpen('inquiry2-modal')">1:1 문의 모달 : 답변대기중</button>
 				</li>
+				<li>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0')">지갑 모달 - 입금</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','1')">지갑 모달 - 출금</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','2')">지갑 모달 - 포인트</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); modalOpen('krw_wallet-modal');">지갑 모달 - krw 계좌등록</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); modalOpen('usdt_wallet-modal');">지갑 모달 - usdt 계좌등록</button>
+				</li>
+				<li>
+					<button class="pop-modal add" onclick="modalOpen('wallet2-modal');">지갑 모달 - krw,usdt 승인대기중</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet3-modal');">지갑 모달 - krw 보유, usdt 승인대기중</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet4-modal');">지갑 모달 - krw 승인대기중, usdt 보유</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet5-modal');">지갑 모달 - krw, usdt 보유</button>
+				</li>
 			</ul>
 		</li>
 		<li data-label="메인">
@@ -254,8 +267,37 @@ echo txtRecord('./@record/');
 <!-- <script src="./dist/js/app.js"></script> -->
 <!-- <script src="./dist/js/jquery.datetimepicker.full.js"></script> -->
 <script src="./dist/js/app.js"></script>
+<script src="./dist/js/jquery-3.7.1.js"></script>
+<!-- <script src="./dist/js/custom.js"></script> -->
 
 <script>
+
+	// 탭클릭
+	const tabClickHandle = (item,index)=>{
+		$(`#${item} .tab_box > a`).eq(index).click();
+	}
+
+	// input width 변경
+    window.autoWidthInput = (input) => {
+        const sizer = input.parentNode.querySelector('.inputSizer');
+        const style = getComputedStyle(input);
+
+        sizer.style.font = style.font;
+        sizer.style.letterSpacing = style.letterSpacing;
+        sizer.textContent = input.value || input.placeholder || '0';
+
+        input.style.width = `${sizer.offsetWidth + 24}px`;
+    };
+
+    window.addEventListener('load', () => {
+        document.querySelectorAll('.dynamic_input input').forEach(input => {
+            autoWidthInput(input);
+        });
+    });
+		
+	//=======================================================
+	//   공통 - 모달
+	//=======================================================
 	const modalOpen = (item) => {
 		const modal = document.querySelector(`#${item}`);
 		modal.classList.add("show", "overflow-y-auto");
@@ -274,6 +316,140 @@ echo txtRecord('./@record/');
 		modal.style.paddingLeft = "0";
 		modal.style.zIndex = "0";
 	}
+
+	// 비밀번호 password<-->text
+	const passwordView = (btn)=>{
+		const input = btn.parentElement.querySelector('input');
+		const use = btn.querySelector('use');
+		if (input.type === 'password') {
+			input.type = 'text';
+			use.setAttribute('xlink:href','./dist/images/icon-defs.svg#watch');
+		} else {
+			input.type = 'password';
+			use.setAttribute('xlink:href','./dist/images/icon-defs.svg#watch-off');
+		}
+	}
+
+
+	//=======================================================
+	//   custom select
+	//=======================================================
+	const customSelectToggle = (item)=>{
+		$(item).parent().toggleClass('on')
+	}
+	const customSelectItem = (item)=>{
+		const parent = $(item).parents('.custom_select'); 
+		const text = $(item).find('span').html();
+		
+		parent.removeClass('on');
+		$(item).addClass('on').siblings().removeClass('on');
+
+		if(parent.hasClass('txt_type')){
+			parent.find(' > button span').html(text);
+			return;
+		}
+
+		let icon = $(item).find('span svg').html()
+		let price = $(item).find('span').text();
+		parent.find('> button .price_icon').html(icon)
+		parent.find('> button .price_txt').text(price)
+	}
+
+	document.addEventListener('click',(e)=>{
+		const select = document.querySelector('.custom_select.on')
+
+		if(select && !select.contains(e.target)){
+			select.classList.remove('on')
+		}
+	})
+
+	//=======================================================
+	//   tab 변경
+	//=======================================================
+	const tabChange = (item)=>{
+		let liN = $(item).index();
+		let content = $(item).parents('.flex').siblings('.tab_content');
+
+		$(item).addClass('active').siblings().removeClass('active');
+		content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
+}
+	const tabChange2 = (item)=>{
+		let liN = $(item).index();
+		let content = $(item).parents('.flex').siblings().find('.tab_content');
+
+		$(item).addClass('active').siblings().removeClass('active');
+		content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
+	}
+
+	//=======================================================
+	//   table
+	//=======================================================
+	const openDetail = (item)=>{
+		$(item).addClass('open').siblings().removeClass('open');
+		$(item).next().addClass('detail_open').siblings().removeClass('detail_open');
+	}
+
+	//=======================================================
+	//   클립보드 복사
+	//=======================================================
+	const copyToClipboard = (text)=>{
+		navigator.clipboard.writeText(text)
+			.then(() => {
+				alert('복사 완료')
+			})
+			.catch((err) => {
+				console.error('복사 실패', err);
+			});
+	}
+
+	//=======================================================
+	//   입금주소확인
+	//=======================================================
+	const addressToggle = (item)=>{
+		$(item).parent().siblings().find('.deposit_address_box').toggle();
+	}
+
+	//=======================================================
+	//   btn toggle
+	//=======================================================
+	const btnToggle = (item)=>{
+		$(item).addClass('active').siblings().removeClass('active')
+	}
+
+
+	//=======================================================
+	//   wallet coin change
+	//=======================================================
+	const coinTabChange = (item,coin)=>{
+		$(item).addClass('bg-current h-12 -mt-2.5 -mb-1').siblings().removeClass('bg-current h-12 -mt-2.5 -mb-1')
+		if(coin == 'krw'){
+			$(item).find('svg').removeClass('text-spurple').addClass('text-krw');
+			$(item).find('.price').removeClass('text-spurple').addClass('text-krw');
+			$(item).siblings().find('svg').addClass('text-spurple').removeClass('text-usdt');
+			$(item).siblings().find('.price').addClass('text-spurple').removeClass('text-usdt');
+			const price = $(item).find('.price').text();
+			$(item).parent().parent().siblings().find('.priceMoney').each(function(){
+				$(this).text(price);
+				$(this).removeClass('text-usdt').addClass('text-krw');
+				$(this).siblings('svg').removeClass('text-usdt').addClass('text-krw');
+				$(this).siblings('svg').find('use').attr('href','./dist/images/icon-defs.svg#krw')
+			})
+		}else{
+			$(item).find('svg').removeClass('text-spurple').addClass('text-usdt');
+			$(item).find('.price').removeClass('text-spurple').addClass('text-usdt');
+			$(item).siblings().find('svg').addClass('text-spurple').removeClass('text-krw');
+			$(item).siblings().find('.price').addClass('text-spurple').removeClass('text-krw');
+			const price = $(item).find('.price').text();
+			$(item).parent().parent().siblings().find('.priceMoney').each(function(){
+				$(this).text(price);
+				$(this).removeClass('text-krw').addClass('text-usdt');
+				$(this).siblings('svg').removeClass('text-krw').addClass('text-usdt');
+				$(this).siblings('svg').find('use').attr('href','./dist/images/icon-defs.svg#usdt')
+			})
+		}
+	}
+
+
 
 </script>
 

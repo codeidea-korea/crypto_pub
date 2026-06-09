@@ -9,6 +9,7 @@
     --color-sub3:#b6b5ff; 
     --color-sub4:#1b1a4a; 
     --color-sub5:#3e2b7f;
+    --color-sub6:#32266e;
 
     --color-spurple:#cc99ff;
     --color-spurple2:#46198d;
@@ -52,8 +53,10 @@ body {font-family: "ds-endendend", sans-serif; background:#0e0f28 url('../images
 .bg-sub2 {background-color:var(--color-sub2); }
 .bg-sub4 {background-color:var(--color-sub4); }
 .bg-sub5 {background-color:var(--color-sub5); }
+.bg-sub6 {background-color:var(--color-sub6); }
 .bg-spurple2 {background-color:var(--color-spurple2); }
 .bg-gradient {background:linear-gradient(to left,#471b8b,#31227f); }
+.bg-current {background:url('../images/bg/current_active.png') no-repeat center center / 100% 100%; }
 
 .text-basic {color:var(--color-basic); }
 .text-sub {color:var(--color-sub); }
@@ -163,6 +166,7 @@ body::after{
 .danger2_btn:disabled {color:#898699; background:url('../images/btn/danger2_btn_disabled.png') no-repeat center center / 100% 100%; }
 
 .price_btn {color:#cc99ff; background:url('../images/btn/price_btn.png') no-repeat center center / 100% 100%; transition:all 0.5s; }
+.price_btn.active,
 .price_btn:hover {color:#ffffff; background:url('../images/btn/price_btn_active.png') no-repeat center center / 100% 100%; }
 
 .switch_btn {background:url('../images/bg/switch_bg.png') no-repeat center center / 100% 100%;}
@@ -398,6 +402,11 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
 .modal .modal-body.alert-body {background:url('../images/bg/alert_bg.png') no-repeat center center / 100% 100%; }
 .modal .modal-body.inscroll {max-height:unset; }
 .modal .modal-body.inscroll .scollbox {overflow-y:auto; max-height:50dvh; }
+.modal .modal-body.inscroll .scollbox2 {overflow-y:auto; max-height:75dvh; }
+
+.modal .inmodal {z-index:100; position:absolute; left:0; top:0; display:flex; align-items:center; justify-content:center; width:100%; height:100%; backdrop-filter:blur(3px); }
+.modal .inmodal .inmodal_body {position:relative; width:97%; height:auto; padding:30px 20px; border:2px solid #dbc9f5; background-color:#3d0e7f; }
+.modal .inmodal .inmodal_body .close_btn {position:absolute; right:15px; top:15px; }
 
 @media all and (max-width:767px){
     .modal .modal-header {padding:10px 15px 0 25px; }

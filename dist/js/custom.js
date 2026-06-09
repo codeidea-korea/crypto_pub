@@ -231,30 +231,27 @@ const passwordView = (btn)=>{
 //=======================================================
 //   custom select
 //=======================================================
-
-$('.custom_select > button').on('click',function(){
-    $(this).parent().toggleClass('on')
-})
-$('.custom_select ul li').on('click',function(){
-    const parent = $(this).parents('.custom_select'); 
-    const text = $(this).find('span').html();
+const customSelectToggle = (item)=>{
+    $(item).parent().toggleClass('on')
+}
+const customSelectItem = (item)=>{
+    const parent = $(item).parents('.custom_select'); 
+    const text = $(item).find('span').html();
+    
+    parent.removeClass('on');
+    $(item).addClass('on').siblings().removeClass('on');
 
     if(parent.hasClass('txt_type')){
-        parent.removeClass('on')
-        parent.find(' > button span').html(text)
-        $(this).addClass('on').siblings().removeClass('on')
-    }else{
-        parent.removeClass('on')
-        $(this).addClass('on').siblings().removeClass('on')
-
-        let icon = $(this).find('span svg').html()
-        let price = $(this).find('span').text();
-        parent.find('> button .price_icon').html(icon)
-        parent.find('> button .price_txt').text(price)
-        
+        parent.find(' > button span').html(text);
+        return;
     }
 
-});
+    let icon = $(item).find('span svg').html()
+    let price = $(item).find('span').text();
+    parent.find('> button .price_icon').html(icon)
+    parent.find('> button .price_txt').text(price)
+}
+
 document.addEventListener('click',(e)=>{
     const select = document.querySelector('.custom_select.on')
 
@@ -269,8 +266,16 @@ document.addEventListener('click',(e)=>{
 const tabChange = (item)=>{
     let liN = $(item).index();
     let content = $(item).parents('.flex').siblings('.tab_content');
-        $(item).addClass('active').siblings().removeClass('active');
-        content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
+
+    $(item).addClass('active').siblings().removeClass('active');
+    content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
+}
+const tabChange2 = (item)=>{
+    let liN = $(item).index();
+    let content = $(item).parents('.flex').siblings().find('.tab_content');
+
+    $(item).addClass('active').siblings().removeClass('active');
+    content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
 }
 
 //=======================================================
@@ -293,3 +298,50 @@ const copyToClipboard = (text)=>{
             console.error('복사 실패', err);
         });
 }
+
+//=======================================================
+//   입금주소확인
+//=======================================================
+const addressToggle = (item)=>{
+    $(item).parent().siblings().find('.deposit_address_box').toggle();
+}
+
+//=======================================================
+//   btn toggle
+//=======================================================
+const btnToggle = (item)=>{
+    $(item).addClass('active').siblings().removeClass('active')
+}
+
+//=======================================================
+//   wallet coin change
+//=======================================================
+const coinTabChange = (item,coin)=>{
+    $(item).addClass('bg-current h-12 -mt-2.5 -mb-1').siblings().removeClass('bg-current h-12 -mt-2.5 -mb-1')
+    if(coin == 'krw'){
+        $(item).find('svg').removeClass('text-spurple').addClass('text-krw');
+        $(item).find('.price').removeClass('text-spurple').addClass('text-krw');
+        $(item).siblings().find('svg').addClass('text-spurple').removeClass('text-usdt');
+        $(item).siblings().find('.price').addClass('text-spurple').removeClass('text-usdt');
+        const price = $(item).find('.price').text();
+        $(item).parent().parent().siblings().find('.priceMoney').each(function(){
+            $(this).text(price);
+            $(this).removeClass('text-usdt').addClass('text-krw');
+            $(this).siblings('svg').removeClass('text-usdt').addClass('text-krw');
+            $(this).siblings('svg').find('use').attr('href','./dist/images/icon-defs.svg#krw')
+        })
+    }else{
+        $(item).find('svg').removeClass('text-spurple').addClass('text-usdt');
+        $(item).find('.price').removeClass('text-spurple').addClass('text-usdt');
+        $(item).siblings().find('svg').addClass('text-spurple').removeClass('text-krw');
+        $(item).siblings().find('.price').addClass('text-spurple').removeClass('text-krw');
+        const price = $(item).find('.price').text();
+        $(item).parent().parent().siblings().find('.priceMoney').each(function(){
+            $(this).text(price);
+            $(this).removeClass('text-krw').addClass('text-usdt');
+            $(this).siblings('svg').removeClass('text-krw').addClass('text-usdt');
+            $(this).siblings('svg').find('use').attr('href','./dist/images/icon-defs.svg#usdt')
+        })
+    }
+}
+

@@ -640,7 +640,7 @@
                 </div>
                 <div class="chat_form">
                     <div class="flex-1 relative">
-                        <input type="text" value="안녕하세요..">
+                        <input type="text" class="text-sm md:text-base" value="안녕하세요..">
                         <div class="disabled_box flex items-center gap-1.5 w-full text-xs md:text-[15px] text-basic">
                             <svg class="w-3 h-3 md:w-5 md:h-5 text-[#f6cf3b]"><use xlink:href="./dist/images/icon-defs.svg#warning"></use></svg>
                             답변 대기 중입니다. 답변 완료 후 이용해 주세요.
@@ -715,7 +715,7 @@
 </div>
 
 <!-- 지갑모달 -->
- <div id="wallet-modal" class="modal show" tabindex="-1" aria-hidden="true" style="margin-top: 0px; margin-left: 0px; padding-left: 0px; z-index: 10000;">
+<div id="wallet-modal" class="modal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
@@ -726,146 +726,1525 @@
                 </div>
                 <button class="close_btn" onclick="modalClose('wallet-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
             </div>
-            <div class="modal-body px-4 md:px-8 pb-10 pt-3">
-                <div class="flex">
+            <div class="modal-body inscroll px-0 md:px-4 pb-6 md:pb-10 pt-3">
+                <div class="flex px-3 md:px-0">
                     <div class="tab_box">
-                        <a href="javascript:;" class="active" onclick="tabChange(this)">입금</a>
-                        <a href="javascript:;" onclick="tabChange(this)">출금</a>
-                        <a href="javascript:;" onclick="tabChange(this)">포인트</a>
+                        <a href="javascript:;" class="active" onclick="tabChange2(this)">입금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">출금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">포인트</a>
                     </div>
                 </div>
-                <div class="tab_content">
-                    <!--입금 -->
-                    <div class="active">
-                        <div class="grid grid-cols-2 mt-7 border-b-2 border-[#b72de4] bg-[#2f0f65] rounded-t-lg">
-                            <div class="flex items-center justify-between px-4 py-2">
-                                <div class="flex items-center gap-1.5">
-                                    <svg class="w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
-                                    <span>KRW</span>
-                                </div>
-                                <a href="javascript:;" class="underline italic">지갑을 등록하세요</a>
-                            </div>
-                            <div class="flex items-center justify-between px-4 py-2">
-                                <div class="flex items-center gap-1.5">
-                                    <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
-                                    <span>USDT</span>
-                                </div>
-                                <a href="javascript:;" class="underline italic">지갑을 등록하세요</a>
-                            </div>
-                        </div>
-                        <div class="py-5 px-3 bg-[#2f0f65] rounded-b-lg">
-                            <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
-                                <div class="text-base font-medium text-spurple">보유 머니 : </div>
-                                <div class="font-medium">10,000 P</div>
-                            </div>
-                            <div class="mt-5 pl-5">코인명 / 네트워크</div>
-                            <div class="grid grid-cols-2 gap-2 mt-2">
-                                <div class="form-control flex items-center justify-center gap-1.5 font-medium">
-                                    <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
-                                    USDT
-                                </div>
-                                <div class="custom_select txt_type type03">
-                                    <button class="flex items-center justify-between gap-4 h-12 px-4 rounded">
-                                        <span class="flex items-center gap-1 text-xs">
-                                            TRC-20
-                                        </span>
-                                        <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
-                                    </button>
-                                    <div class="w-full shadow-lg rounded">
-                                        <ul class="">
-                                            <li class="on">TRC-20</li>
-                                            <li>TRC-20</li>
-                                            <li>TRC-20</li>
-                                        </ul>
+                <div class="scollbox2">
+                    <div class="tab_content">
+                        <!--입금 -->
+                        <div class="active">
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="underline italic" onclick="modalOpen('krw_wallet-modal')">지갑을 등록하세요</a>
+                                    </div>
+                                    <i class="w-0.5 h-5 bg-[#9362b1]"></i>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="underline italic" onclick="modalOpen('usdt_wallet-modal')">지갑을 등록하세요</a>
                                     </div>
                                 </div>
-                                <select name="" id="" class="form-select text-center font-medium">
-                                    <option value="0">TRC-20</option>
-                                </select>
-
                             </div>
-
-                            <div class="mt-5 pl-5">충전 금액</div>
-                            <div class="grid grid-cols-4 gap-2 mt-2">
-                                <button class="btn price_btn w-full">10</button>
-                                <button class="btn price_btn w-full">50</button>
-                                <button class="btn price_btn w-full">100</button>
-                                <button class="btn price_btn w-full">300</button>
-                                <button class="btn price_btn w-full">500</button>
-                                <button class="btn price_btn w-full">1000</button>
-                                <button class="btn price_btn w-full">3000</button>
-                                <button class="btn price_btn w-full">초기화</button>
-                            </div>
-
-                            <div class="mt-5">
-                                <div class="form-control active flex items-center justify-end">
-                                    <span>₩ </span>
-                                    <div class="dynamic_input">
-                                        <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
-                                        <span class="inputSizer"></span>
-                                    </div>
-                                    <img src="./dist/images/bg/auth_num_slash.png" alt="">
-                                    <div class="flex items-center justify-center gap-2 w-32 h-full">
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">코인명 / 네트워크</div>
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <div class="form-control flex items-center justify-center gap-1.5 font-medium">
                                         <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
                                         USDT
                                     </div>
-                                </div>
-                                <button class="switch_btn relative z-10 flex items-center justify-center w-10 h-10 ml-5 -mt-2.5 -mb-2.5"><svg class="w-7 h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
-                                <div class="form-control flex items-center justify-end">
-                                    <span class="mr-10 text-usdt">예상금액</span>
-                                    <div class="dynamic_input">
-                                        <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
-                                        <span class="inputSizer"></span>
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center justify-center font-medium">
+                                                TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)"><span>TRC-20</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-21</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-22</span></li>
+                                            </ul>
+                                        </div>
                                     </div>
-                                    <img src="./dist/images/bg/auth_num_slash2.png" alt="">
-                                    <div class="flex items-center justify-center gap-2 w-32 h-full">
-                                        <svg class="w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
-                                        KRW
-                                    </div>
                                 </div>
-                            </div>
-          
-                            <div class="mt-2.5 px-4 text-xs">
-                                ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
-                                ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
-                            </div>
 
+                                <div class="mt-5 pl-5">충전 금액</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">500</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">3000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-2 md:px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                                <div class="deposit_address_box flex items-center flex-col md:flex-row gap-4 p-4 md:p-6 mt-4 md:mt-8 bg-sub6 rounded-2xl" style="display:none;">
+                                    <img src="./dist/images/icon/qr.png" alt="">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span>USDT</span>
+                                            <span class="text-basic">네트워크</span>
+                                            <span>ERC 20</span>
+                                            <span class="text-basic">입금시간</span>
+                                            <span>59:59</span>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 px-2.5 py-4 my-1.5 bg-sub4 rounded-lg">
+                                            <div class="break-all">0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8</div>
+                                            <button class="shrink-0" onclick="copyToClipboard('0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                        </div>
+                                        <div>※ 입금주소는 매번 변경됩니다. 입금주소를 꼭 확인하세요.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base" onclick="addressToggle(this)">입금 주소 확인</button>
+                            </div>
                         </div>
 
-                        <button class="btn btn_primary active w-full mt-5 py-3 text-base">입금 주소 확인</button>
+                        <!-- 출금 -->
+                        <div>
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="underline italic" onclick="modalOpen('krw_wallet-modal')">지갑을 등록하세요</a>
+                                    </div>
+                                    <i class="w-0.5 h-5 bg-[#9362b1]"></i>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="underline italic" onclick="modalOpen('usdt_wallet-modal')">지갑을 등록하세요</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">입금받을 주소 선택</div>
+                                <div class="mt-2">
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center gap-1 font-medium">
+                                                <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <b class="text-usdt">USDT</b> / TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-20
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-21
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-22
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">30만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">환전 신청</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 -->
+                        <div>
+                            <div class="px-3 md:px-0">
+                                <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">MAX</button>
+                                </div>
+                                <div class="mt-5 pl-5">전환 포인트</div>
+                                <div class="w-full mt-2">
+                                    <div class="auth_num w-full">
+                                        <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
+                                        <button>초기화</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
+                            </div>
+                        </div>
                     </div>
 
-                    <!-- 출금 -->
-                    <div>출금</div>
-
-                    <!-- 포인트 -->
-                    <div>
-                        <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
-                            <div class="text-base font-medium text-spurple">보유 머니 : </div>
-                            <div class="font-medium">10,000 P</div>
-                        </div>
-                        <div class="mt-5 pl-5">출금 금액 선택</div>
-                        <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
-                            <button class="btn price_btn w-full">1만</button>
-                            <button class="btn price_btn w-full">5만</button>
-                            <button class="btn price_btn w-full">10만</button>
-                            <button class="btn price_btn w-full">50만</button>
-                            <button class="btn price_btn w-full">100만</button>
-                            <button class="btn price_btn w-full">MAX</button>
-                        </div>
-                        <div class="mt-5 pl-5">전환 포인트</div>
-                        <div class="w-full mt-2">
-                            <div class="auth_num w-full">
-                                <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
-                                <button>초기화</button>
+                    <!-- USDT 테더 지갑 등록 -->
+                    <div id="usdt_wallet-modal" class="inmodal" style="margin-top: -10000px; margin-left: -10000px; padding-left: 0px; z-index: 0;">
+                        <div class="inmodal_body">
+                            <button class="close_btn" onclick="modalClose('usdt_wallet-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                            <div class="flex items-center justify-center gap-2">
+                                <svg class="w-7 md:w-8 h-7 md:h-8 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                <span class="text-2xl md:text-[26px] font-medium">USDT 테더 지갑 등록</span>
                             </div>
+                            <div class="mt-5">
+                                <input type="text" class="form-control" placeholder="텔레그램 아이디 *">
+                                <p class="pl-5 pt-0.5 text-info">텔레그램 ID를 등록해주세요.</p>
+                            </div>
+                            <div>
+                                <div class="relative mt-4">
+                                    <input type="password" class="form-control" placeholder="테더 지갑 주소 *">
+                                    <button class="z-10 absolute right-3 top-1/2 -translate-y-1/2 p-2 text-sub" onclick="passwordView(this)"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#watch-off"></use></svg></button>
+                                </div>
+                                <p class="pl-5 pt-0.5 text-info">지갑주소를 입력해주세요.</p>
+                            </div>
+                            <div class="mt-4">
+                                <select class="form-select w-full">
+                                    <option value="0">ERC-20</option>
+                                </select>
+                                <p class="pl-5 pt-0.5 text-info">네트워크</p>
+                            </div>
+                            <div class="mt-5">
+                                <input type="checkbox" class="form-check-input" id="inmodal_1_check">
+                                <label for="inmodal_1_check" class="text-xxs">지갑주소 입력 오류로 인해 발생하는 충전/환전 사고에 대해 본 사이트는 책임지지 않음에 동의합니다.</label>
+                            </div>
+                            <button class="btn btn_primary w-full h-12 mt-8 text-sm md:text-base">등록</button>
                         </div>
-                        <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
                     </div>
 
+                    <!-- KRW 계좌 등록 -->
+                    <div id="krw_wallet-modal" class="inmodal" style="margin-top: -10000px; margin-left: -10000px; padding-left: 0px; z-index: 0;">
+                        <div class="inmodal_body">
+                            <button class="close_btn" onclick="modalClose('krw_wallet-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+                            <div class="flex items-center justify-center gap-2">
+                                <svg class="w-7 md:w-8 h-7 md:h-8 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                <span class="text-2xl md:text-[26px] font-medium">KRW 계좌 등록</span>
+                            </div>
+                            <div class="mt-5">
+                                <select class="form-select w-full">
+                                    <option value="0">은행선택</option>
+                                </select>
+                                <p class="pl-5 pt-0.5 text-info">은행명</p>
+                            </div>
+                            <div class="mt-4">
+                                <input type="text" class="form-control" placeholder="예금주*">
+                                <p class="pl-5 pt-0.5 text-info">예금주명을 등록해주세요.</p>
+                            </div>
+                            <div class="mt-4">
+                                <div class="relative">
+                                    <input type="password" class="form-control" placeholder="계좌번호 *">
+                                    <button class="z-10 absolute right-3 top-1/2 -translate-y-1/2 p-2 text-sub" onclick="passwordView(this)"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#watch-off"></use></svg></button>
+                                </div>
+                                <p class="pl-5 pt-0.5 text-info">계좌번호를 입력해주세요.</p>
+                            </div>
+                            <div class="flex items-center gap-2.5 mt-4">
+                                <input type="text" class="form-control" placeholder="휴대폰 번호 *">
+                                <button class="btn btn_primary shrink-0 w-1/3 h-[42px] inactive text-sm md:text-base">재발송 (1/3)</button>
+                            </div>
+                            <div class="flex items-center gap-2.5 mt-4">
+                                <div class="auth_num w-full">
+                                    <input type="text" class="form-control" placeholder="인증번호 *">
+                                    <div class="time text-xs text-center"><span class="block">남은 시간</span><span class="flex items-center gap-1 text-success"><svg class="w-4 h-4"><use xlink:href="./dist/images/icon-defs.svg#check"></use></svg>완료</span></div>
+                                </div>
+                                <button class="btn btn_primary type02 shrink-0 w-1/3 h-[42px] inactive text-sm md:text-base" disabled>확인</button>
+                            </div>
+                            <div class="mt-5">
+                                <input type="checkbox" class="form-check-input" id="alert_1_check">
+                                <label for="alert_1_check" class="text-xxs">지갑주소 입력 오류로 인해 발생하는 충전/환전 사고에 대해 본 사이트는 책임지지 않음에 동의합니다.</label>
+                            </div>
+                            <button class="btn btn_primary w-full h-12 mt-5 text-sm md:text-base">등록</button>
+                        </div>
+                    </div>
                 </div>
-                
             </div> 
+
+        </div>
+    </div> 
+</div>
+
+<!-- 지갑모달 - krw,usdt 승인대기중 -->
+<div id="wallet2-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg>
+                    <span class="text-base text-white font-medium">지갑</span>
+                    <span class="text-xs text-sub2">|   입금</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('wallet2-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-0 md:px-4 pb-6 md:pb-10 pt-3">
+                <div class="flex px-3 md:px-0">
+                    <div class="tab_box">
+                        <a href="javascript:;" class="active" onclick="tabChange2(this)">입금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">출금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">포인트</a>
+                    </div>
+                </div>
+                <div class="scollbox2">
+                    <div class="tab_content">
+                        <!--입금 -->
+                        <div class="active">
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning" onclick="modalOpen('krw_wallet-modal')">승인 대기 중</a>
+                                    </div>
+                                    <i class="w-0.5 h-5 bg-[#9362b1]"></i>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning" onclick="modalOpen('usdt_wallet-modal')">승인 대기 중</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">코인명 / 네트워크</div>
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <div class="form-control flex items-center justify-center gap-1.5 font-medium">
+                                        <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        USDT
+                                    </div>
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center justify-center font-medium">
+                                                TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)"><span>TRC-20</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-21</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-22</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">충전 금액</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">500</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">3000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-2 md:px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                                <div class="deposit_address_box flex items-center flex-col md:flex-row gap-4 p-4 md:p-6 mt-4 md:mt-8 bg-sub6 rounded-2xl" style="display:none;">
+                                    <img src="./dist/images/icon/qr.png" alt="">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span>USDT</span>
+                                            <span class="text-basic">네트워크</span>
+                                            <span>ERC 20</span>
+                                            <span class="text-basic">입금시간</span>
+                                            <span>59:59</span>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 px-2.5 py-4 my-1.5 bg-sub4 rounded-lg">
+                                            <div class="break-all">0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8</div>
+                                            <button class="shrink-0" onclick="copyToClipboard('0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                        </div>
+                                        <div>※ 입금주소는 매번 변경됩니다. 입금주소를 꼭 확인하세요.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base" onclick="addressToggle(this)">입금 주소 확인</button>
+                            </div>
+                        </div>
+
+                        <!-- 출금 -->
+                        <div>
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning" onclick="modalOpen('krw_wallet-modal')">승인 대기 중</a>
+                                    </div>
+                                    <i class="w-0.5 h-5 bg-[#9362b1]"></i>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning" onclick="modalOpen('usdt_wallet-modal')">승인 대기 중</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">입금받을 주소 선택</div>
+                                <div class="mt-2">
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center gap-1 font-medium">
+                                                <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <b class="text-usdt">USDT</b> / TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-20
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-21
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-22
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">30만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">환전 신청</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 -->
+                        <div>
+                            <div class="px-3 md:px-0">
+                                <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">MAX</button>
+                                </div>
+                                <div class="mt-5 pl-5">전환 포인트</div>
+                                <div class="w-full mt-2">
+                                    <div class="auth_num w-full">
+                                        <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
+                                        <button>초기화</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </div> 
+</div>
+
+<!-- 지갑모달 - krw 보유, usdt 승인대기중 -->
+<div id="wallet3-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg>
+                    <span class="text-base text-white font-medium">지갑</span>
+                    <span class="text-xs text-sub2">|   입금</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('wallet3-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-0 md:px-4 pb-6 md:pb-10 pt-3">
+                <div class="flex px-3 md:px-0">
+                    <div class="tab_box">
+                        <a href="javascript:;" class="active" onclick="tabChange2(this)">입금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">출금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">포인트</a>
+                    </div>
+                </div>
+                <div class="scollbox2">
+                    <div class="tab_content">
+                        <!--입금 -->
+                        <div class="active">
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="text-krw">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning">승인 대기 중</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-krw"><use href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                        <span class="text-krw">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">코인명 / 네트워크</div>
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <div class="form-control flex items-center justify-center gap-1.5 font-medium">
+                                        <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        USDT
+                                    </div>
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center justify-center font-medium">
+                                                TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)"><span>TRC-20</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-21</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-22</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">충전 금액</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">500</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">3000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-2 md:px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                                <div class="deposit_address_box flex items-center flex-col md:flex-row gap-4 p-4 md:p-6 mt-4 md:mt-8 bg-sub6 rounded-2xl" style="display:none;">
+                                    <img src="./dist/images/icon/qr.png" alt="">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span>USDT</span>
+                                            <span class="text-basic">네트워크</span>
+                                            <span>ERC 20</span>
+                                            <span class="text-basic">입금시간</span>
+                                            <span>59:59</span>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 px-2.5 py-4 my-1.5 bg-sub4 rounded-lg">
+                                            <div class="break-all">0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8</div>
+                                            <button class="shrink-0" onclick="copyToClipboard('0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                        </div>
+                                        <div>※ 입금주소는 매번 변경됩니다. 입금주소를 꼭 확인하세요.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base" onclick="addressToggle(this)">입금 주소 확인</button>
+                            </div>
+                        </div>
+
+                        <!-- 출금 -->
+                        <div>
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="text-krw">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning">승인 대기 중</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-krw"><use href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                        <span class="text-krw">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">입금받을 주소 선택</div>
+                                <div class="mt-2">
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center gap-1 font-medium">
+                                                <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <b class="text-usdt">USDT</b> / TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-20
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-21
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-22
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">30만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">환전 신청</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 -->
+                        <div>
+                            <div class="px-3 md:px-0">
+                                <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">MAX</button>
+                                </div>
+                                <div class="mt-5 pl-5">전환 포인트</div>
+                                <div class="w-full mt-2">
+                                    <div class="auth_num w-full">
+                                        <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
+                                        <button>초기화</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </div> 
+</div>
+
+<!-- 지갑모달 - usdt 보유, krw 승인대기중 -->
+<div id="wallet4-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg>
+                    <span class="text-base text-white font-medium">지갑</span>
+                    <span class="text-xs text-sub2">|   입금</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('wallet4-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-0 md:px-4 pb-6 md:pb-10 pt-3">
+                <div class="flex px-3 md:px-0">
+                    <div class="tab_box">
+                        <a href="javascript:;" class="active" onclick="tabChange2(this)">입금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">출금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">포인트</a>
+                    </div>
+                </div>
+                <div class="scollbox2">
+                    <div class="tab_content">
+                        <!--입금 -->
+                        <div class="active">
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning">승인 대기 중</a>
+                                    </div>
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="text-usdt">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        <span class="text-usdt">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">코인명 / 네트워크</div>
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <div class="form-control flex items-center justify-center gap-1.5 font-medium">
+                                        <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        USDT
+                                    </div>
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center justify-center font-medium">
+                                                TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)"><span>TRC-20</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-21</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-22</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">충전 금액</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">500</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">3000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-2 md:px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                                <div class="deposit_address_box flex items-center flex-col md:flex-row gap-4 p-4 md:p-6 mt-4 md:mt-8 bg-sub6 rounded-2xl" style="display:none;">
+                                    <img src="./dist/images/icon/qr.png" alt="">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span>USDT</span>
+                                            <span class="text-basic">네트워크</span>
+                                            <span>ERC 20</span>
+                                            <span class="text-basic">입금시간</span>
+                                            <span>59:59</span>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 px-2.5 py-4 my-1.5 bg-sub4 rounded-lg">
+                                            <div class="break-all">0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8</div>
+                                            <button class="shrink-0" onclick="copyToClipboard('0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                        </div>
+                                        <div>※ 입금주소는 매번 변경됩니다. 입금주소를 꼭 확인하세요.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base" onclick="addressToggle(this)">입금 주소 확인</button>
+                            </div>
+                        </div>
+
+                        <!-- 출금 -->
+                        <div>
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2">
+                                        <div class="flex items-center gap-1.5 text-disabled">
+                                            <svg class="w-5 h-5 text-disabled"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <a href="javascript:;" class="text-warning">승인 대기 중</a>
+                                    </div>
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="text-usdt">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        <span class="text-usdt">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">입금받을 주소 선택</div>
+                                <div class="mt-2">
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center gap-1 font-medium">
+                                                <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <b class="text-usdt">USDT</b> / TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-20
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-21
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-22
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">30만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">환전 신청</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 -->
+                        <div>
+                            <div class="px-3 md:px-0">
+                                <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">MAX</button>
+                                </div>
+                                <div class="mt-5 pl-5">전환 포인트</div>
+                                <div class="w-full mt-2">
+                                    <div class="auth_num w-full">
+                                        <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
+                                        <button>초기화</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
+        </div>
+    </div> 
+</div>
+
+<!-- 지갑모달 - krw,usdt 보유 -->
+<div id="wallet5-modal" class="modal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <div class="flex items-center gap-x-2 flex-wrap">
+                    <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg>
+                    <span class="text-base text-white font-medium">지갑</span>
+                    <span class="text-xs text-sub2">|   입금</span>
+                </div>
+                <button class="close_btn" onclick="modalClose('wallet5-modal')"><svg class="w-3 h-3"><use xlink:href="./dist/images/icon-defs.svg#x"></use></svg></button>
+            </div>
+            <div class="modal-body inscroll px-0 md:px-4 pb-6 md:pb-10 pt-3">
+                <div class="flex px-3 md:px-0">
+                    <div class="tab_box">
+                        <a href="javascript:;" class="active" onclick="tabChange2(this)">입금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">출금</a>
+                        <a href="javascript:;" onclick="tabChange2(this)">포인트</a>
+                    </div>
+                </div>
+                <div class="scollbox2">
+                    <div class="tab_content">
+                        <!--입금 -->
+                        <div class="active">
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 cursor-pointer" onclick="coinTabChange(this,'krw')">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-spurple"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="price text-spurple">1,000,000</span>원
+                                        </div>
+                                    </div>
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1 cursor-pointer" onclick="coinTabChange(this,'usdt')">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="price text-usdt">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        <span class="priceMoney text-usdt">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">코인명 / 네트워크</div>
+                                <div class="grid grid-cols-2 gap-2 mt-2">
+                                    <div class="form-control flex items-center justify-center gap-1.5 font-medium">
+                                        <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        USDT
+                                    </div>
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center justify-center font-medium">
+                                                TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)"><span>TRC-20</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-21</span></li>
+                                                <li onclick="customSelectItem(this)"><span>TRC-22</span></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">충전 금액</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">500</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">3000</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-2 md:px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                                <div class="deposit_address_box flex items-center flex-col md:flex-row gap-4 p-4 md:p-6 mt-4 md:mt-8 bg-sub6 rounded-2xl" style="display:none;">
+                                    <img src="./dist/images/icon/qr.png" alt="">
+                                    <div>
+                                        <div class="flex items-center gap-2">
+                                            <span>USDT</span>
+                                            <span class="text-basic">네트워크</span>
+                                            <span>ERC 20</span>
+                                            <span class="text-basic">입금시간</span>
+                                            <span>59:59</span>
+                                        </div>
+                                        <div class="flex items-center justify-between gap-4 px-2.5 py-4 my-1.5 bg-sub4 rounded-lg">
+                                            <div class="break-all">0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8</div>
+                                            <button class="shrink-0" onclick="copyToClipboard('0xB8392C454d5a93eA1eA8D40E2842Fe8de442d1a8')"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#file-copy"></use></svg></button>
+                                        </div>
+                                        <div>※ 입금주소는 매번 변경됩니다. 입금주소를 꼭 확인하세요.</div>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base" onclick="addressToggle(this)">입금 주소 확인</button>
+                            </div>
+                        </div>
+
+                        <!-- 출금 -->
+                        <div>
+                            <div class="mt-5 md:mt-7 border-b-2 border-[#b72de4] md:bg-[#2f0f65] rounded-t-lg">
+                                <div class="flex items-center gap-1">
+                                    <div class="flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 cursor-pointer" onclick="coinTabChange(this,'krw')">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-spurple"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            <span>KRW</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="price text-spurple">1,000,000</span>원
+                                        </div>
+                                    </div>
+                                    <div class="bg-current flex-1 flex items-start md:items-center justify-between flex-col md:flex-row px-4 py-2 md:h-12 md:-mt-2.5 -mb-1 cursor-pointer" onclick="coinTabChange(this,'usdt')">
+                                        <div class="flex items-center gap-1.5">
+                                            <svg class="w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            <span>USDT</span>
+                                        </div>
+                                        <div class="flex items-center gap-1 font-medium">
+                                            <span class="price text-usdt">1,000,000,000</span>원
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="py-5 px-3 md:bg-[#2f0f65] rounded-b-lg">
+                                <div class="flex items-center justify-between py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="flex items-center gap-2.5 font-medium">
+                                        <svg class="w-6 h-6 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                        <span class="priceMoney text-usdt">1,000,000,000</span>원
+                                    </div>
+                                </div>
+                                <div class="mt-5 pl-5">입금받을 주소 선택</div>
+                                <div class="mt-2">
+                                    <div class="custom_select txt_type type03">
+                                        <button class="flex items-center justify-between gap-4 h-[42px] px-4 rounded" onclick="customSelectToggle(this)">
+                                            <span class="flex-1 flex items-center gap-1 font-medium">
+                                                <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                <b class="text-usdt">USDT</b> / TRC-20
+                                            </span>
+                                            <svg class="svg-icon w-3 h-3 arrow text-white"><use href="./dist/images/icon-defs.svg#arrow"></use></svg>
+                                        </button>
+                                        <div class="w-full shadow-lg rounded">
+                                            <ul class="">
+                                                <li class="on" onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-20
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-21
+                                                    </span>
+                                                </li>
+                                                <li onclick="customSelectItem(this)">
+                                                    <span class="flex-1 flex items-center gap-1 font-medium">
+                                                        <svg class="svg-icon w-6 h-6 mr-1 text-usdt"><use href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                                        <b class="text-usdt">USDT</b> / TRC-22
+                                                    </span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-4 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">30만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">300만원</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">초기화</button>
+                                </div>
+
+                                <div class="mt-5">
+                                    <div class="form-control active flex items-center justify-end">
+                                        <span>₩ </span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="800,000,000" oninput="autoWidthInput(this)" style="width: 118px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-krw"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>
+                                            KRW
+                                        </div>
+                                    </div>
+                                    <button class="switch_btn relative z-10 flex items-center justify-center w-8 md:w-10 h-8 md:h-10 ml-3 md:ml-5 -mt-2.5 -mb-2.5"><svg class="w-6 md:w-7 h-5 md:h-6"><use xlink:href="./dist/images/icon-defs.svg#switch"></use></svg></button>
+                                    <div class="form-control flex items-center justify-end">
+                                        <span class="mr-10 text-usdt">예상금액</span>
+                                        <div class="dynamic_input">
+                                            <input type="text" class="form-nostyle text-right" value="0" oninput="autoWidthInput(this)" style="width: 35px;">
+                                            <span class="inputSizer"></span>
+                                        </div>
+                                        <img src="./dist/images/bg/auth_num_slash2.png" alt="">
+                                        <div class="flex items-center justify-center gap-2 w-24 md:w-32 h-full">
+                                            <svg class="shrink-0 w-5 h-5 text-usdt"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>
+                                            USDT
+                                        </div>
+                                    </div>
+                                </div>
+            
+                                <div class="mt-2.5 px-4 text-xs">
+                                    ※ 1 USDT = <span class="text-usdt">0</span> 원<br/>
+                                    ※ 실제 입금시점의 적용환율은 달라질 수 있습니다.
+                                </div>
+
+                            </div>
+                            <div class="px-3 md:px-0">
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">환전 신청</button>
+                            </div>
+                        </div>
+
+                        <!-- 포인트 -->
+                        <div>
+                            <div class="px-3 md:px-0">
+                                <div class="flex items-center justify-between mt-5 py-3 px-4 bg-sub5 rounded-xl">
+                                    <div class="text-base font-medium text-spurple">보유 머니 : </div>
+                                    <div class="font-medium">10,000 P</div>
+                                </div>
+                                <div class="mt-5 pl-5">출금 금액 선택</div>
+                                <div class="grid grid-cols-3 md:grid-cols-6 gap-2 mt-2">
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">1만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">5만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">10만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">50만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">100만</button>
+                                    <button class="btn price_btn w-full" onclick="btnToggle(this)">MAX</button>
+                                </div>
+                                <div class="mt-5 pl-5">전환 포인트</div>
+                                <div class="w-full mt-2">
+                                    <div class="auth_num w-full">
+                                        <input type="text" class="form-control pr-28 md:pr-40 text-right" value="10,000,000 P">
+                                        <button>초기화</button>
+                                    </div>
+                                </div>
+                                <button class="btn btn_primary active w-full mt-5 py-3 text-base">신청</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+
         </div>
     </div> 
 </div>
