@@ -120,8 +120,8 @@ echo txtRecord('./@record/');
 					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0')">지갑 모달 - 입금</button>
 					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','1')">지갑 모달 - 출금</button>
 					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','2')">지갑 모달 - 포인트</button>
-					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); modalOpen('krw_wallet-modal');">지갑 모달 - krw 계좌등록</button>
-					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); modalOpen('usdt_wallet-modal');">지갑 모달 - usdt 계좌등록</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0'); modalOpen('krw_wallet-modal');">지갑 모달 - krw 계좌등록</button>
+					<button class="pop-modal add" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0'); modalOpen('usdt_wallet-modal');">지갑 모달 - usdt 계좌등록</button>
 				</li>
 				<li>
 					<button class="pop-modal add" onclick="modalOpen('wallet2-modal');">지갑 모달 - krw,usdt 승인대기중</button>
