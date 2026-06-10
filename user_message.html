@@ -41,7 +41,7 @@
                     </div>
 
                     <div class="flex">
-                        <div class="tab_box mt-14">
+                        <div class="tab_box mt-8 md:mt-14">
                             <a href="javascript:;" class="active" onclick="tabChange(this)">전체</a>
                             <a href="javascript:;" onclick="tabChange(this)">안 읽음</a>
                             <a href="javascript:;" onclick="tabChange(this)">읽음</a>
@@ -52,14 +52,14 @@
                         <!-- 전체 -->
                         <div class="active">
                             <div class="flex items-center justify-end">
-                                <button class="danger2_btn h-10 px-5" onclick="modalOpen('delete-modal')"><span>읽음 전체삭제</span></button>
+                                <button class="danger2_btn h-8 md:h-10 px-4 md:px-5 text-xs md:text-sm" onclick="modalOpen('delete-modal')"><span>읽음 전체삭제</span></button>
                             </div>
-                            <div class="table_box mt-7">
+                            <div class="table_box mt-5 md:mt-7">
                                 <table class="table">
                                     <colgroup>
-                                        <col width="20%">
+                                        <col width="25%">
                                         <col width="*">
-                                        <col width="10%">
+                                        <col width="15%">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -205,12 +205,12 @@
                         </div>
                         <!-- 안 읽음 -->
                         <div>
-                            <div class="table_box mt-7">
+                            <div class="table_box mt-5 md:mt-7">
                                 <table class="table">
                                     <colgroup>
-                                        <col width="20%">
+                                        <col width="25%">
                                         <col width="*">
-                                        <col width="10%">
+                                        <col width="15%">
                                     </colgroup>
                                     <thead>
                                         <tr>
@@ -332,15 +332,15 @@
                         <!-- 읽음 -->
                         <div>
                             <div class="flex items-center justify-end gap-2.5">
-                                <button class="danger2_btn h-10 px-5" disabled><span>선택 삭제</span></button>
-                                <button class="danger2_btn h-10 px-5" onclick="modalOpen('delete-modal')"><span>읽음 전체삭제</span></button>
+                                <button class="danger2_btn h-8 md:h-10 px-4 md:px-5 text-xs md:text-sm" disabled><span>선택 삭제</span></button>
+                                <button class="danger2_btn h-8 md:h-10 px-4 md:px-5 text-xs md:text-sm" onclick="modalOpen('delete-modal')"><span>읽음 전체삭제</span></button>
                             </div>
-                            <div class="table_box mt-7">
+                            <div class="table_box mt-5 md:mt-7">
                                 <table class="table">
                                     <colgroup>
-                                        <col width="20%">
+                                        <col width="25%">
                                         <col width="*">
-                                        <col width="10%">
+                                        <col width="15%">
                                     </colgroup>
                                     <thead>
                                         <tr>

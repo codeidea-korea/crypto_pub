@@ -196,7 +196,7 @@ echo txtRecord('./@record/');
 				<li>
 					<a href="./setting.html" target="_blank" class="add">설정 - 회원정보 : krw,usdt 등록 안했을때</a>
 					<a href="./setting.html?tab=1" target="_blank" class="add">설정 - 회원정보 : krw,udst 승인대기중</a>
-					<a href="./setting.html?tab=1" target="_blank" class="add">설정 - 회원정보 : krw,udst 등록완료</a>
+					<a href="./setting.html?tab=2" target="_blank" class="add">설정 - 회원정보 : krw,udst 등록완료</a>
 				</li>
 			</ul>
 		</li>
@@ -381,6 +381,11 @@ echo txtRecord('./@record/');
 		content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
 	}
 
+	const tabtxtChange = (item)=>{
+		const txt = $(item).text();
+		$(item).parents('.modal-body').siblings('.modal-header').find('.tab_txt').text(txt);
+	}
+
 	//=======================================================
 	//   table
 	//=======================================================
@@ -421,7 +426,7 @@ echo txtRecord('./@record/');
 	//   wallet coin change
 	//=======================================================
 	const coinTabChange = (item,coin)=>{
-		$(item).addClass('bg-current h-12 -mt-2.5 -mb-1').siblings().removeClass('bg-current h-12 -mt-2.5 -mb-1')
+		$(item).addClass('bg-current md:h-12 md:-mt-2.5 -mb-1').siblings().removeClass('bg-current md:h-12 md:-mt-2.5 -mb-1');
 		if(coin == 'krw'){
 			$(item).find('svg').removeClass('text-spurple').addClass('text-krw');
 			$(item).find('.price').removeClass('text-spurple').addClass('text-krw');

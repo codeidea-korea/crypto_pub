@@ -4,7 +4,7 @@
         <div class="coin_box krw">
             <dl class="coin_item coin krw">
                 <dt><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#krw"></use></svg>KRW</dt>
-                <dd><span>1,000,000,000</span>원</dd>
+                <dd><span>1,000,000,000</span> 원</dd>
             </dl>
             <dl class="coin_item coin usdt">
                 <dt><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#usdt"></use></svg>USDT</dt>
@@ -16,13 +16,13 @@
             </dl>
         </div>
         <div class="top_link">
-            <a href="javascript:;" class="skew_btn mo_view"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#deposit"></use></svg>입금</a>
-            <a href="javascript:;" class="skew_btn mo_view"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#withdrawal"></use></svg>출금</a>
-            <a href="javascript:;" class="skew_btn type02"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#wallet"></use></svg>지갑</a>
-            <a href="javascript:;" class="icon_btn mo_view"><svg class="h-[22px]"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg></a>
-            <a href="javascript:;" class="icon_btn"><svg class="h-6"><use xlink:href="./dist/images/icon-defs.svg#menu_envelope"></use></svg></a>
-            <a href="javascript:;" class="icon_btn"><svg class="h-6"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg></a>
-            <a href="javascript:;" class="icon_btn type02 mo_view"><svg class="h-[22px]"><use xlink:href="./dist/images/icon-defs.svg#menu_roulette"></use></svg></a>
+            <a href="javascript:;" class="skew_btn mo_view" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0');"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#deposit"></use></svg>입금</a>
+            <a href="javascript:;" class="skew_btn mo_view" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','1');"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#withdrawal"></use></svg>출금</a>
+            <a href="javascript:;" class="skew_btn type02" onclick="modalOpen('wallet-modal');"><svg class="w-5 h-[18px]"><use xlink:href="./dist/images/icon-defs.svg#wallet"></use></svg>지갑</a>
+            <a href="./setting.html" class="icon_btn mo_view"><svg class="h-[22px]"><use xlink:href="./dist/images/icon-defs.svg#menu_user"></use></svg></a>
+            <a href="./user_message.html" class="icon_btn"><svg class="h-6"><use xlink:href="./dist/images/icon-defs.svg#menu_envelope"></use></svg></a>
+            <a href="javascript:;" class="icon_btn" onclick="modalOpen('inquiry-modal')"><svg class="h-6"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg></a>
+            <a href="javascript:;" class="icon_btn type02 mo_view" onclick="modalOpen('roulette_9-modal')"><svg class="h-[22px]"><use xlink:href="./dist/images/icon-defs.svg#menu_roulette"></use></svg></a>
         </div>
         <div class="mycoin">
             <img class="icon" src="./dist/images/icon/coin1.png" alt="">

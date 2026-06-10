@@ -302,6 +302,11 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
 .radio_custom input:checked + label.usdt i:before {background-color:var(--color-usdt); }
 .radio_custom input:checked + label i:before {opacity:1; }
 
+@media all and (max-width:767px){
+    .radio_custom label {font-size:12px; }
+    .radio_custom label i {width:18px; height:18px; }
+    .radio_custom label i:before {width:9px; height:9px; }
+}
 
 /* ----------------------------------------------
             tab_box
@@ -328,10 +333,10 @@ input:focus {outline:0 none !important; box-shadow:none !important; }
 .table tbody tr.disabled {filter:grayscale(0.6); pointer-events:none; }
 .table tbody tr.disabled * {color:var(--color-disabled); }
 .table tbody tr.open,
-.table:not(.nohover) tbody tr:hover {background: linear-gradient(90deg, #251a5c 0%, #33266b 50%, #471d51 100%);}
+.table:not(.nohover) tbody tr:not(.detail):hover {background: linear-gradient(90deg, #251a5c 0%, #33266b 50%, #471d51 100%);}
 .table tbody tr.detail {position:relative; display:none; background:#0d1028; }
 .table tbody tr.detail.detail_open {display:table-row; }
-.table tbody tr.detail:after {content:''; position:absolute; left:0; bottom:100%; width:100%; height:8px; background:#0d1028; }
+.table tbody tr.detail td:after {content:''; position:absolute; left:0; bottom:100%; width:100%; height:8px; background:#0d1028; }
 .table tbody td {border:0 none; padding:15px 20px; }
 .table tbody td.read {color:#ff637d; }
 .table tbody td.noread {color:#78f38c; }
@@ -773,6 +778,7 @@ footer .footer_wrap .fnb .menu_box p {font-size:24px; color:#fff; }
 footer .footer_wrap .fnb .menu_box ul {margin-top:10px; }
 footer .footer_wrap .fnb .menu_box ul li + li {margin-top:15px; }
 footer .footer_wrap .fnb .menu_box ul li a {font-size:18px; }
+footer .footer_wrap .fnb .menu_box ul li.active a {color:#ff76ca; }
 
 @media all and (max-width:767px){
     footer .footer_inner {overflow:hidden; padding:0 30px; }
@@ -859,6 +865,7 @@ footer .footer_wrap .fnb .menu_box ul li a {font-size:18px; }
 .sub_visual img {position:absolute; right:5%; top:50%; max-height:calc(100% + 30px); transform:translateY(-50%); }
 
 @media all and (max-width:1000px){
+    .sub_visual {margin-top:20px; }
     .sub_visual .txt_box {width:100%; padding-left:40px; }
     .sub_visual img {max-width:50%; }
 }

@@ -57,14 +57,14 @@
                     </div>
                 </div>
                 <div class="entry_btn_box flex items-center gap-2 mt-5">
-                    <button class="entry_btn w-full"><img src="./dist/images/icon/deposit.png" alt=""><span>입금</span></button>
-                    <button class="entry_btn w-full"><img src="./dist/images/icon/withdrawal.png" alt=""><span>출금</span></button>
+                    <button class="entry_btn w-full" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','0');"><img src="./dist/images/icon/deposit.png" alt=""><span>입금</span></button>
+                    <button class="entry_btn w-full" onclick="modalOpen('wallet-modal'); tabClickHandle('wallet-modal','1');"><img src="./dist/images/icon/withdrawal.png" alt=""><span>출금</span></button>
                 </div>
             </div>
             <nav class="side-nav">
                 <ul>
                     <li class="menu_1">
-                        <a href="javascript:;" class="side-menu">
+                        <a href="javascript:;" class="side-menu" onclick="modalOpen('roulette_9-modal');">
                             <div class="side-menu__icon"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_roulette"></use></svg></div>
                             <div class="side-menu__title">
                                 럭키룰렛 
@@ -90,25 +90,25 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./casino_slot.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_symbol"></use></svg> </div>
                                     <div class="side-menu__title"> 슬롯 <div class="side-menu__sub-txt">420</div> </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./casino_live.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_livecasino"></use></svg> </div>
                                     <div class="side-menu__title"> 라이브 카지노 <div class="side-menu__sub-txt">420</div> </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./casino_bet.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_betgames"></use></svg> </div>
                                     <div class="side-menu__title"> 벳게임즈 <div class="side-menu__sub-txt">420</div> </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./casino_table.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_tablegames"></use></svg> </div>
                                     <div class="side-menu__title"> 테이블게임 <div class="side-menu__sub-txt">420</div> </div>
                                 </a>
@@ -116,7 +116,7 @@
                         </ul>
                     </li>
                     <li class="menu_9">
-                        <a href="javascript:;" class="side-menu">
+                        <a href="./casino_mini.html" class="side-menu">
                             <div class="side-menu__icon"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_minigame"></use></svg></div>
                             <div class="side-menu__title">
                                 미니게임 
@@ -133,55 +133,55 @@
                         </a>
                         <ul class="">
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="javascript:;" class="side-menu" onclick="modalOpen('wallet-modal');">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_wallet"></use></svg> </div>
                                     <div class="side-menu__title"> 지갑 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_message.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_envelope"></use></svg> </div>
                                     <div class="side-menu__title"> 쪽지 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_friendmng.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_friends"></use></svg> </div>
                                     <div class="side-menu__title"> 지인관리 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_bettinghistory.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_bethistory"></use></svg> </div>
                                     <div class="side-menu__title"> 베팅내역 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_transactiondetail.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_transaction"></use></svg> </div>
                                     <div class="side-menu__title"> 거래내역 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_cryptobenefit.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_crypto"></use></svg> </div>
                                     <div class="side-menu__title"> CRYPTO 혜택 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./user_moneylog.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_moneylog"></use></svg> </div>
                                     <div class="side-menu__title"> 머니로그 : 롤링 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu">
+                                <a href="./setting.html" class="side-menu">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_setting"></use></svg> </div>
                                     <div class="side-menu__title"> 설정 </div>
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;" class="side-menu logout">
+                                <a href="javascript:;" class="side-menu logout" onclick="modalOpen('logout-modal')">
                                     <div class="side-menu__icon"> <svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_symbol"></use></svg> </div>
                                     <div class="side-menu__title"> 로그아웃 </div>
                                 </a>
@@ -189,7 +189,7 @@
                         </ul>
                     </li>
                     <li class="menu_5">
-                        <a href="javascript:;" class="side-menu">
+                        <a href="./event.html" class="side-menu">
                             <div class="side-menu__icon"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_event"></use></svg></div>
                             <div class="side-menu__title">
                                 이벤트
@@ -197,7 +197,7 @@
                         </a>
                     </li>
                     <li class="menu_6">
-                        <a href="javascript:;" class="side-menu">
+                        <a href="./user_affiliate.html" class="side-menu">
                             <div class="side-menu__icon"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_affiliate"></use></svg></div>
                             <div class="side-menu__title">
                                 지인추천
@@ -205,7 +205,7 @@
                         </a>
                     </li>
                     <li class="menu_7">
-                        <a href="javascript:;" class="side-menu">
+                        <a href="javascript:;" class="side-menu" onclick="modalOpen('inquiry-modal')">
                             <div class="side-menu__icon"><svg class="w-5 h-5"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg></div>
                             <div class="side-menu__title">
                                 라이브 상담
@@ -252,9 +252,9 @@
 <div class="quick_menu">
     <ul>
         <li><button class="fold_btn" onclick="sideToggle()"><svg><use xlink:href="./dist/images/icon-defs.svg#menu"></use></svg></button></li>
-        <li><a href="javascript:;" class="type2"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_casino"></use></svg><span>라이브 카지노</span></a></li>
-        <li><a href="javascript:;"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_bethistory"></use></svg><span>베팅</span></a></li>
+        <li><a href="./casino_live.html" class="type2"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_casino"></use></svg><span>라이브 카지노</span></a></li>
+        <li><a href="./user_bettinghistory.html"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_bethistory"></use></svg><span>베팅</span></a></li>
         <li><a href="javascript:;"><svg class="w-7 h-7"><use xlink:href="./dist/images/icon-defs.svg#menu_sports"></use></svg><span>스포츠</span></a></li>
-        <li><a href="javascript:;" class="type3"><svg class="w-9 h-9"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg><span>실시간 지원</span></a></li>
+        <li><a href="javascsript:;" class="type3" onclick="modalOpen('inquiry2-modal')"><svg class="w-9 h-9"><use xlink:href="./dist/images/icon-defs.svg#menu_support"></use></svg><span>실시간 지원</span></a></li>
     </ul>
 </div>

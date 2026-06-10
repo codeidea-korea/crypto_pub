@@ -277,6 +277,10 @@ const tabChange2 = (item)=>{
     $(item).addClass('active').siblings().removeClass('active');
     content.find('>div').eq(liN).addClass('active').siblings().removeClass('active');
 }
+const tabtxtChange = (item)=>{
+    const txt = $(item).text();
+    $(item).parents('.modal-body').siblings('.modal-header').find('.tab_txt').text(txt);
+}
 
 //=======================================================
 //   table
@@ -317,7 +321,7 @@ const btnToggle = (item)=>{
 //   wallet coin change
 //=======================================================
 const coinTabChange = (item,coin)=>{
-    $(item).addClass('bg-current h-12 -mt-2.5 -mb-1').siblings().removeClass('bg-current h-12 -mt-2.5 -mb-1')
+    $(item).addClass('bg-current md:h-12 md:-mt-2.5 -mb-1').siblings().removeClass('bg-current md:h-12 md:-mt-2.5 -mb-1');
     if(coin == 'krw'){
         $(item).find('svg').removeClass('text-spurple').addClass('text-krw');
         $(item).find('.price').removeClass('text-spurple').addClass('text-krw');
@@ -345,3 +349,7 @@ const coinTabChange = (item,coin)=>{
     }
 }
 
+// 탭클릭
+const tabClickHandle = (item,index)=>{
+    $(`#${item} .tab_box > a`).eq(index).click();
+}

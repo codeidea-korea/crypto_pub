@@ -40,7 +40,7 @@
                     </div>
 
                     <div class="flex">
-                        <div class="tab_box mt-8 md:mt-14">
+                        <div class="tab_box mt-14">
                             <a href="javascript:;" class="active" onclick="tabChange(this)">개요</a>
                             <a href="javascript:;" onclick="tabChange(this)">추천한 사용자</a>
                         </div>
@@ -321,8 +321,6 @@
     <script>
         $(window).on('load',function(){
             menuOn('menu_6');
-            let search = (window.location.search).split('=')[1];
-            $('.tab_box > a').eq(search).click();
         });
     </script>
 
